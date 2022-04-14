@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+// ignore: duplicate_ignore
 class Button extends StatelessWidget {
   //const Button({Key? key}) : super(key: key);
   static const DARK = Color.fromRGBO(82, 82, 82, 1);
@@ -11,7 +12,6 @@ class Button extends StatelessWidget {
   final bool big;
   final Color color;
 
-  // ignore: use_key_in_widget_constructors
   Button({
     required this.text,
     this.big = false,
