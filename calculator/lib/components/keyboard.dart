@@ -24,6 +24,7 @@ class Keyboard extends StatelessWidget {
             Button.operation(text: '÷', cb: cb),
           ]),
           // ignore: prefer_const_literals_to_create_immutables
+          SizedBox(height: 1),
           ButtonRow([
             Button(text: '7', cb: cb),
             Button(text: '8', cb: cb),
@@ -31,6 +32,7 @@ class Keyboard extends StatelessWidget {
             Button.operation(text: 'x', cb: cb),
           ]),
           // ignore: prefer_const_literals_to_create_immutables
+          SizedBox(height: 1),
           ButtonRow([
             Button(text: '4', cb: cb),
             Button(text: '5', cb: cb),
@@ -38,6 +40,7 @@ class Keyboard extends StatelessWidget {
             Button.operation(text: '-', cb: cb),
           ]),
           // ignore: prefer_const_literals_to_create_immutables
+          SizedBox(height: 1),
           ButtonRow([
             Button(text: '1', cb: cb),
             Button(text: '2', cb: cb),
@@ -45,6 +48,7 @@ class Keyboard extends StatelessWidget {
             Button.operation(text: '+', cb: cb),
           ]),
           // ignore: prefer_const_literals_to_create_immutables
+          SizedBox(height: 1),
           ButtonRow([
             Button.big(text: '0', cb: cb),
             Button(text: '.', cb: cb),

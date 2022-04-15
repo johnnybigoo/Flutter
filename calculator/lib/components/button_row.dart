@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'button.dart';
 
@@ -15,7 +17,10 @@ class ButtonRow extends StatelessWidget {
       flex: 1,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: buttons,
+        children: buttons.fold(<Widget>[], (list, b) {
+          list.isEmpty ? list.add(b) : list.addAll([SizedBox(width: 1), b]);
+          return list;
+        }),
       ),
     );
   }

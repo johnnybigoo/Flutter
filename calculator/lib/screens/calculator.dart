@@ -1,15 +1,22 @@
 // ignore_for_file: use_key_in_widget_constructors, avoid_print
 
+import 'package:calculator/models/memory.dart';
 import 'package:flutter/material.dart';
 import '../components/display.dart';
 import '../components/keyboard.dart';
 
-class Calculator extends StatelessWidget {
-  //const Calculator({Key? key, required bool debugShowCheckedModeBanner})
-  //: super(key: key);
+class Calculator extends StatefulWidget {
+  @override
+  State<Calculator> createState() => _CalculatorState();
+}
 
-  _onPressed(String text) {
-    print(text);
+class _CalculatorState extends State<Calculator> {
+  final Memory memory = Memory();
+
+  _onPressed(String command) {
+    setState(() {
+      memory.applyCommand(command);
+    });
   }
 
   @override
@@ -17,7 +24,7 @@ class Calculator extends StatelessWidget {
     return MaterialApp(
         home: Column(
       children: <Widget>[
-        Display('123.45'),
+        Display(memory.value),
         Keyboard(_onPressed),
       ],
     ));
