@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import '../components/display.dart';
@@ -8,13 +8,17 @@ class Calculator extends StatelessWidget {
   //const Calculator({Key? key, required bool debugShowCheckedModeBanner})
   //: super(key: key);
 
+  _onPressed(String text) {
+    print(text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Column(
-      children: const <Widget>[
+      children: <Widget>[
         Display('123.45'),
-        Keyboard(),
+        Keyboard(_onPressed),
       ],
     ));
   }
