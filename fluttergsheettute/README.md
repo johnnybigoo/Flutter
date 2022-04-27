@@ -1,6 +1,10 @@
 # fluttergsheettute
 
-A new Flutter project.
+A new Flutter project using Google sheets.
+
+# YouTube channel Mitch Koko
+[Video: Google Sheets x Flutter](https://www.youtube.com/watch?v=ZSSERiYLv3c)
+
 
 ## Getting Started
 
