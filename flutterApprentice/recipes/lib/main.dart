@@ -64,12 +64,28 @@ class _MyHomePageState extends State<MyHomePage> {
             // 6
             itemBuilder: (BuildContext context, int index) {
               // 7
-              // TODO: Update to return Recipe card
-              return Text(Recipe.samples[index].label);
+              // TODO: Add GestureDetector
+              return buildRecipeCard(Recipe.samples[index]);
+              // return Text(Recipe.samples[index].label);
             },
           ),
       ),
     );
-    // TODO: Add buildRecipeCard() Here
+  }
+
+  Widget buildRecipeCard(Recipe recipe) {
+    //1
+    return Card(
+      //2
+      child: Column(
+        //3
+        children: <Widget>[
+          //4
+          Image(image: AssetImage(recipe.imageUrl)),
+          //5
+          Text(recipe.label),
+        ],
+      ),
+    );
   }
 }
