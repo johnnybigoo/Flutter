@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'recipe.dart';
 
 void main() {
   runApp(const RecipeApp());
@@ -48,12 +49,25 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    // 1
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: SafeArea(
-        child: Container(),
+      // 2
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        // 3
+        body: SafeArea(
+          // 4
+          child: ListView.builder(
+            // 5
+            itemCount: Recipe.samples.length,
+            // 6
+            itemBuilder: (BuildContext context, int index) {
+              // 7
+              // TODO: Update to return Recipe card
+              return Text(Recipe.samples[index].label);
+            },
+          ),
       ),
     );
     // TODO: Add buildRecipeCard() Here
