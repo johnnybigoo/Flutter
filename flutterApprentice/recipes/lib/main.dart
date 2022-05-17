@@ -11,7 +11,6 @@ class RecipeApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     final ThemeData theme = ThemeData();
 
     return MaterialApp(
@@ -52,23 +51,39 @@ class _MyHomePageState extends State<MyHomePage> {
     // 1
     return Scaffold(
       // 2
-        appBar: AppBar(
-          title: Text(widget.title),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      // 3
+      body: SafeArea(
+        // 4
+        child: ListView.builder(
+          // 5
+          itemCount: Recipe.samples.length,
+          // 6
+          itemBuilder: (BuildContext context, int index) {
+            // 7
+            return GestureDetector(
+              // 8
+              onTap: () {
+                // 9
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      // 10
+                      // TODO: Replace return with return RecipeDetail()
+                      return Text('Detail page');
+                    },
+                  ),
+                );
+              },
+              // 11
+              child: buildRecipeCard(Recipe.samples[index]),
+            );
+            // return Text(Recipe.samples[index].label);
+          },
         ),
-        // 3
-        body: SafeArea(
-          // 4
-          child: ListView.builder(
-            // 5
-            itemCount: Recipe.samples.length,
-            // 6
-            itemBuilder: (BuildContext context, int index) {
-              // 7
-              // TODO: Add GestureDetector
-              return buildRecipeCard(Recipe.samples[index]);
-              // return Text(Recipe.samples[index].label);
-            },
-          ),
       ),
     );
   }
@@ -78,8 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // 1
       elevation: 2.0,
       //2
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       // 3
       child: Padding(
         padding: const EdgeInsets.all(16.0),
