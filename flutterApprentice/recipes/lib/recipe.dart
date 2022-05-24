@@ -138,12 +138,12 @@ class Recipe {
 }
 
 class Ingredient {
-  double qunatity;
+  double quantity;
   String measure;
   String name;
 
   Ingredient(
-    this.qunatity,
+    this.quantity,
     this.measure,
     this.name,
   );
