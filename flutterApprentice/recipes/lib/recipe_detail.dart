@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:recipes/recipe.dart';
+import 'recipe.dart';
 
 class RecipeDetail extends StatefulWidget {
   final Recipe recipe;
 
-  const RecipeDetail({
-    Key? key,
-    required this.recipe,
-  }) : super(key: key);
+  const RecipeDetail({Key? key, required this.recipe}) : super(key: key);
 
   @override
   _RecipeDetailState createState() {
@@ -28,15 +25,13 @@ class _RecipeDetailState extends State<RecipeDetail> {
       // 2
       body: SafeArea(
         // 3
-        child: ListView(
+        child: Column(
           children: <Widget>[
             // 4
             SizedBox(
               height: 300,
               width: double.infinity,
-              child: Image(
-                image: AssetImage(widget.recipe.imageUrl),
-              ),
+              child: Image(image: AssetImage(widget.recipe.imageUrl)),
             ),
             // 5
             const SizedBox(

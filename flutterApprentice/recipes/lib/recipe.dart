@@ -1,15 +1,11 @@
 class Recipe {
   String label;
   String imageUrl;
+
   int servings;
   List<Ingredient> ingredients;
 
-  Recipe(
-    this.label,
-    this.imageUrl,
-    this.servings,
-    this.ingredients,
-  );
+  Recipe(this.label, this.imageUrl, this.servings, this.ingredients);
 
   static List<Recipe> samples = [
     Recipe(
@@ -75,7 +71,7 @@ class Recipe {
         ),
         Ingredient(
           2,
-          'cup',
+          'cups',
           'sugar',
         ),
         Ingredient(
