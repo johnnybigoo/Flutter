@@ -19,27 +19,27 @@ class EmptyGroceryScreen extends StatelessWidget {
           children: [
             // 1
             Flexible(
-                // 2
-                child: AspectRatio(
-                  aspectRatio: 1 / 1,
-                  child: Image.asset('assets/fooderlich_assets/empty_list.png'),
-                ),
+              // 2
+              child: AspectRatio(
+                aspectRatio: 1 / 1,
+                child: Image.asset('assets/fooderlich_assets/empty_list.png'),
+              ),
             ),
             const Text(
               'No Groceries',
-                  style: TextStyle(fontSize: 21.0),
+              style: TextStyle(fontSize: 21.0),
             ),
             const SizedBox(height: 16.0),
             const Text(
               'Shopping for ingredients?\n'
-                  'Tap the + button to write them down!',
+              'Tap the + button to write them down!',
               textAlign: TextAlign.center,
             ),
             MaterialButton(
               textColor: Colors.white,
-              child: const Text('Brownse Recipes'),
+              child: const Text('Browse Recipes'),
               shape: RoundedRectangleBorder(
-                borderRadius:  BorderRadius.circular(30.0),
+                borderRadius: BorderRadius.circular(30.0),
               ),
               color: Colors.green,
               onPressed: () {
