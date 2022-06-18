@@ -17,7 +17,9 @@ class GroceryScreen extends StatelessWidget {
         child: const Icon(Icons.add),
         onPressed: () {
           // 1
-          final manager = Provider.of<GroceryManager>(context, listen: false);
+          final manager = Provider.of<GroceryManager>(
+              context,
+              listen: false);
           // 2
           Navigator.push(
             context,
