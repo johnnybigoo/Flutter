@@ -14,7 +14,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
     RecipesScreen(),
