@@ -29,6 +29,7 @@ class Fooderlich extends StatelessWidget {
           ChangeNotifierProvider(create: (context) => GroceryManager(),
           ),
         ],
+        // Test comment VS code in browser
         child: const Home(),
       ),
     );
