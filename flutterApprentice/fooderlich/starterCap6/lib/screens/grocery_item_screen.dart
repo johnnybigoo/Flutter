@@ -8,10 +8,13 @@ import '../models/models.dart';
 class GroceryItemScreen extends StatefulWidget {
   // 1
   final Function(GroceryItem) onCreate;
+
   // 2
   final Function(GroceryItem) onUpdate;
+
 // 3
   final GroceryItem? originalItem;
+
 // 4
   final bool isUpdating;
 
@@ -100,7 +103,8 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             buildTimeField(context),
             const SizedBox(height: 10.0),
             buildColorPicker(context),
-            // TODO 18: Add slider
+            const SizedBox(height: 10.0),
+            buildQuantityField()
             // TODO: 19: Add Grocery Tile
           ],
         ),
@@ -201,6 +205,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
       ],
     );
   }
+
   Widget buildDateField(BuildContext context) {
     // 1
     return Column(
@@ -224,10 +229,10 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
                 final currentDate = DateTime.now();
                 // 7
                 final selectedDate = await showDatePicker(
-                    context: context,
-                    initialDate: currentDate,
-                    firstDate: currentDate,
-                    lastDate: DateTime(currentDate.year + 5),
+                  context: context,
+                  initialDate: currentDate,
+                  firstDate: currentDate,
+                  lastDate: DateTime(currentDate.year + 5),
                 );
                 // 8
                 setState(() {
@@ -244,6 +249,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
       ],
     );
   }
+
   Widget buildTimeField(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -256,22 +262,22 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
               style: GoogleFonts.lato(fontSize: 28.0),
             ),
             TextButton(
-                child: const Text('Select'),
-                onPressed: () async {
-                  // 1
-                  final timeOfDay = await showTimePicker(
-                    // 2
-                    context: context,
-                    initialTime: TimeOfDay.now(),
-                  );
+              child: const Text('Select'),
+              onPressed: () async {
+                // 1
+                final timeOfDay = await showTimePicker(
+                  // 2
+                  context: context,
+                  initialTime: TimeOfDay.now(),
+                );
 
-                  // 3
-                  setState(() {
-                    if (timeOfDay != null) {
-                      _timeOfDay = timeOfDay;
-                    }
-                  });
-                },
+                // 3
+                setState(() {
+                  if (timeOfDay != null) {
+                    _timeOfDay = timeOfDay;
+                  }
+                });
+              },
             ),
           ],
         ),
@@ -279,7 +285,8 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
       ],
     );
   }
-  Widget  buildColorPicker(BuildContext context) {
+
+  Widget buildColorPicker(BuildContext context) {
     // 1
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -301,37 +308,84 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
         ),
         // 3
         TextButton(
-            child: const Text('Select'),
-            onPressed: () {
-              // 4
-              showDialog(
-                  context: context,
-                  builder: (context) {
-                    // 5
-                    return AlertDialog(
-                      content: BlockPicker(
-                        pickerColor: Colors.white,
-                        // 6
-                        onColorChanged: (color) {
-                          setState(() => _currentColor = color);
-                        },
-                      ),
-                      actions: [
-                        // 7
-                        TextButton(
-                            child: const Text('Save'),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                        ),
-                      ],
-                    );
-                  },
-              );
-            },
+          child: const Text('Select'),
+          onPressed: () {
+            // 4
+            showDialog(
+              context: context,
+              builder: (context) {
+                // 5
+                return AlertDialog(
+                  content: BlockPicker(
+                    pickerColor: Colors.white,
+                    // 6
+                    onColorChanged: (color) {
+                      setState(() => _currentColor = color);
+                    },
+                  ),
+                  actions: [
+                    // 7
+                    TextButton(
+                      child: const Text('Save'),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ],
+                );
+              },
+            );
+          },
         ),
       ],
     );
   }
-  // TODO: Add buildQuantityField()
+
+  Widget buildQuantityField() {
+    // 1
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // 2
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.ideographic,
+          children: [
+            Text(
+              'Quantity',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+            const SizedBox(width: 16.0),
+            Text(
+              _currentSlideValue.toInt().toString(),
+              style: GoogleFonts.lato(fontSize: 18.0),
+            ),
+          ],
+        ),
+        // 3
+        Slider(
+          // 4
+          inactiveColor: _currentColor.withOpacity(0.5),
+          activeColor: _currentColor,
+          // 5
+          value: _currentSlideValue.toDouble(),
+          // 6
+          min: 0.0,
+          max: 100.0,
+          // 7
+          divisions: 100,
+          // 8
+          label: _currentSlideValue.toInt().toString(),
+          // 9
+          onChanged: (double value) {
+            setState(
+              () {
+                _currentSlideValue = value.toInt();
+              },
+            );
+          },
+        ),
+      ],
+    );
+  }
 }
