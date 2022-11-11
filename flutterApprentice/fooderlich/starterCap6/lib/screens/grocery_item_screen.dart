@@ -4,6 +4,7 @@ import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import '../models/models.dart';
+import '../components/grocery_tile.dart';
 
 class GroceryItemScreen extends StatefulWidget {
   // 1
@@ -23,7 +24,8 @@ class GroceryItemScreen extends StatefulWidget {
     required this.onCreate,
     required this.onUpdate,
     this.originalItem,
-  })  : isUpdating = (originalItem != null),
+  })
+      : isUpdating = (originalItem != null),
         super(key: key);
 
   @override
@@ -104,8 +106,23 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             const SizedBox(height: 10.0),
             buildColorPicker(context),
             const SizedBox(height: 10.0),
-            buildQuantityField()
-            // TODO: 19: Add Grocery Tile
+            buildQuantityField(),
+            GroceryTile(
+              item: GroceryItem(
+                id: 'previwMode',
+                name: _name,
+                importance: _importance,
+                color: _currentColor,
+                quantity: _currentSlideValue,
+                date: DateTime(
+                    _dueDate.year,
+                    _dueDate.month,
+                    _dueDate.day,
+                    _timeOfDay.hour,
+                    _timeOfDay.minute
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -379,7 +396,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
           // 9
           onChanged: (double value) {
             setState(
-              () {
+                  () {
                 _currentSlideValue = value.toInt();
               },
             );
