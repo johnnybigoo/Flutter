@@ -275,7 +275,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Time od Day',
+              'Time of Day',
               style: GoogleFonts.lato(fontSize: 28.0),
             ),
             TextButton(
