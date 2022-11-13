@@ -31,15 +31,19 @@ class GroceryTile extends StatelessWidget {
         children: [
           Row(
             children: [
+              // 2
               Container(
                 width: 5.0,
                 color: item.color,
               ),
+              // 3
               const SizedBox(width: 16.0),
+              // 4
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // 5
                   Text(
                     item.name,
                     style: GoogleFonts.lato(
@@ -57,7 +61,9 @@ class GroceryTile extends StatelessWidget {
             ],
           ),
           Row(
+            // 6
             children: [
+              // 7
               Text(
                 item.quantity.toString(),
                 style: GoogleFonts.lato(
@@ -65,6 +71,7 @@ class GroceryTile extends StatelessWidget {
                   fontSize: 21.0,
                 ),
               ),
+              // 8
               buildCheckbox(),
             ],
           ),
@@ -77,9 +84,8 @@ class GroceryTile extends StatelessWidget {
     if (item.importance == Importance.low) {
       return Text('Low', style: GoogleFonts.lato(decoration: textDecoration));
     } else if (item.importance == Importance.medium) {
-      return Text('Medium',
-          style: GoogleFonts.lato(fontWeight: FontWeight.w800,
-              decoration: textDecoration));
+      return Text('Medium', style: GoogleFonts.lato(fontWeight: FontWeight.w800,
+          decoration: textDecoration));
     } else if (item.importance == Importance.high) {
       return Text(
         'High',
