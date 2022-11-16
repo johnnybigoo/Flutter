@@ -1,82 +1,98 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 import '../models/models.dart';
 import '../screens/screens.dart';
 
-// 1
-class AppRouter extends RouterDelegate
-    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
-  // 2
-  @override
-  final GlobalKey<NavigatorState> navigatorKey;
-
-  // 3
+class AppRouter {
   final AppStateManager appStateManager;
-
-  // 4
+  final ProfileManager profileManager;
   final GroceryManager groceryManager;
 
-  // 5
-  final ProfileManager profileManager;
+  AppRouter(this.appStateManager, this.profileManager, this.groceryManager);
 
-  AppRouter({
-    required this.appStateManager,
-    required this.groceryManager,
-    required this.profileManager,
-  }) : navigatorKey = GlobalKey<NavigatorState>() {
-    appStateManager.addListener(notifyListeners);
-    groceryManager.addListener(notifyListeners);
-    profileManager.addListener(notifyListeners);
-  }
+  late final router = GoRouter(
+    debugLogDiagnostics: true,
+    refreshListenable: appStateManager,
+    initialLocation: '/login',
+    routes: [
+      GoRoute(
+        name: 'login',
+        path: '/login',
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        name: 'onboarding',
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+      GoRoute(
+        name: 'home',
+        path: '/:tab',
+        builder: (context, state) {
+          final tab = int.tryParse(state.params['tab'] ?? '') ?? 0;
+          return Home(key: state.pageKey, currentTab: tab);
+        },
+        routes: [
+          GoRoute(
+            name: 'item',
+            path: 'item/:id',
+            builder: (context, state) {
+              final itemId = state.params['id'] ?? '';
+              final item = groceryManager.getGroceryItem(itemId);
+              return GroceryItemScreen(
+                originalItem: item,
+                onCreate: (item) {
+                  groceryManager.addItem(item);
+                },
+                onUpdate: (item) {
+                  groceryManager.updateItem(item);
+                },
+              );
+            },
+          ),
+          GoRoute(
+              name: 'profile',
+              path: 'profile',
+              builder: (context, state) {
+                final tab = int.tryParse(state.params['tab'] ?? '') ?? 0;
+                return ProfileScreen(
+                    user: profileManager.getUser, currentTab: tab);
+              },
+              routes: [
+                GoRoute(
+                  name: 'rw',
+                  path: 'rw',
+                  builder: (context, state) => const WebViewScreen(),
+                ),
+              ]),
+        ],
+      ),
+    ],
+    redirect: (state) {
+      final loggedIn = appStateManager.isLoggedIn;
+      final loggingIn = state.subloc == '/login';
+      if (!loggedIn) return loggingIn ? null : '/login';
 
-  @override void dispose() {
-    appStateManager.removeListener(notifyListeners);
-    groceryManager.removeListener(notifyListeners);
-    profileManager.removeListener(notifyListeners);
-    super.dispose();
-  }
+      final isOnboardingComplete = appStateManager.isOnboardingComplete;
+      final onboarding = state.subloc == '/onboarding';
+      if (!isOnboardingComplete) {
+        return onboarding ? null : '/onboarding';
+      }
 
-  // 6
-  @override
-  Widget build(BuildContext context) {
-    // 7
-    return Navigator(
-      // 8
-      key: navigatorKey,
-      onPopPage: _handlePopPage,
-      // 9
-      pages: [
-        // TODO: Add SplashScreen
-        // TODO: Add LoginScreen
-        // TODO: Add OnboardingScreen
-        // TODO: Add Home
-        // TODO: Create new item
-        // TODO: Select GroceryItemScreen
-        // TODO: Add Profile Screen
-        // TODO: Add WebView Screen
-      ],
-    );
-  }
-
-  bool _handlePopPage(// 1
-      Route<dynamic> route,
-      // 2
-      result) {
-    // 3
-    if (!route.didPop(result)) {
-      // 4
-      return false;
-    }
-    // 5
-    // TODO: Handle Onboarding and splash
-    // TODO: Handle state when user closes grocery item screen
-    // TODO: Handle state when user closes profile screen
-    // TODO: Handle state when user closes WebView screen
-    // 6
-    return true;
-
-
-    // 10
-    @override
-    Future<void> setNewRoutePath(configuration) async => null;
-  }
+      if (loggingIn || onboarding) return '/${FooderlichTab.explore}';
+      return null;
+    },
+    errorPageBuilder: (context, state) {
+      return MaterialPage(
+        key: state.pageKey,
+        child: Scaffold(
+          body: Center(
+            child: Text(
+              state.error.toString(),
+            ),
+          ),
+        ),
+      );
+    },
+  );
+}

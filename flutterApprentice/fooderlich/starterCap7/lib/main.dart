@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 import 'fooderlich_theme.dart';
 import 'models/models.dart';
-import 'screens/screens.dart';
 import 'navigation/app_router.dart';
 
 void main() async {
@@ -16,7 +15,10 @@ void main() async {
 class Fooderlich extends StatefulWidget {
   final AppStateManager appStateManager;
 
-  const Fooderlich({super.key, required this.appStateManager});
+  const Fooderlich({
+    super.key,
+    required this.appStateManager,
+  });
 
   @override
   FooderlichState createState() => FooderlichState();
@@ -25,17 +27,11 @@ class Fooderlich extends StatefulWidget {
 class FooderlichState extends State<Fooderlich> {
   late final _groceryManager = GroceryManager();
   late final _profileManager = ProfileManager();
-  late AppRouter _appRouter;
-
-  @override
-  void initState() {
-    _appRouter = AppRouter(
-      appStateManager: _appStateManager,
-      groceryManager: _groceryManager,
-      profileManager: _profileManager,
-    );
-    super.initState();
-  }
+  late final _appRouter = AppRouter(
+    widget.appStateManager,
+    _profileManager,
+    _groceryManager,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -60,16 +56,14 @@ class FooderlichState extends State<Fooderlich> {
             theme = FooderlichTheme.light();
           }
 
-          home: Router(
-            routerDelegate: _appRouter,
-            // TODO: Add backButtonDispatcher
-          );
+          final router = _appRouter.router;
 
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
+          return MaterialApp.router(
             theme: theme,
             title: 'Fooderlich',
-            home: const LoginScreen(),
+            routerDelegate: router.routerDelegate,
+            routeInformationParser: router.routeInformationParser,
+            routeInformationProvider: router.routeInformationProvider,
           );
         },
       ),
