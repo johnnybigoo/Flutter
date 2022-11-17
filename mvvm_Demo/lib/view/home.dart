@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 child: FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage,
                   image:
-                      '${listPictureViewModel.pictures![index].picSumModel.downloadUrl}',
+                      '${listPictureViewModel.pictures?[index].picSumModel.downloadUrl}',
                   fit: BoxFit.contain,
                 ),
               ),
