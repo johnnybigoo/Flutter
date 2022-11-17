@@ -9,24 +9,43 @@ import '../models/models.dart';
 
 class GroceryItemScreen extends StatefulWidget {
   final Function(GroceryItem) onCreate;
-  final Function(GroceryItem) onUpdate;
+  final Function(GroceryItem, int) onUpdate;
   final GroceryItem? originalItem;
   final int index;
   final bool isUpdating;
 
+  static MaterialPage page({
+    GroceryItem? item,
+    int index = -1,
+    required Function(GroceryItem) onCreate,
+    required Function(GroceryItem, int) onUpdate,
+  }) {
+    return MaterialPage(
+      name: FooderlichPages.groceryItemDetails,
+      key: ValueKey(FooderlichPages.groceryItemDetails),
+      child: GroceryItemScreen(
+        originalItem: item,
+        index: index,
+        onCreate: onCreate,
+        onUpdate: onUpdate,
+      ),
+    );
+  }
+
   const GroceryItemScreen({
-    super.key,
+    Key? key,
     required this.onCreate,
     required this.onUpdate,
     this.originalItem,
     this.index = -1,
-  }) : isUpdating = (originalItem != null);
+  })  : isUpdating = (originalItem != null),
+        super(key: key);
 
   @override
-  GroceryItemScreenState createState() => GroceryItemScreenState();
+  _GroceryItemScreenState createState() => _GroceryItemScreenState();
 }
 
-class GroceryItemScreenState extends State<GroceryItemScreen> {
+class _GroceryItemScreenState extends State<GroceryItemScreen> {
   final _nameController = TextEditingController();
   String _name = '';
   Importance _importance = Importance.low;
@@ -59,21 +78,17 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
               );
 
               if (widget.isUpdating) {
-                widget.onUpdate(groceryItem);
+                widget.onUpdate(groceryItem, widget.index);
               } else {
                 widget.onCreate(groceryItem);
               }
-
-              // TODO: Navigate to home:ToBuy
             },
           )
         ],
         elevation: 0.0,
         title: Text(
           'Grocery Item',
-          style: GoogleFonts.lato(
-            fontWeight: FontWeight.w600,
-          ),
+          style: GoogleFonts.lato(fontWeight: FontWeight.w600),
         ),
       ),
       body: Container(
@@ -117,9 +132,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
       children: [
         Text(
           'Item Name',
-          style: GoogleFonts.lato(
-            fontSize: 28.0,
-          ),
+          style: GoogleFonts.lato(fontSize: 28.0),
         ),
         TextField(
           controller: _nameController,
@@ -127,19 +140,13 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
           decoration: InputDecoration(
             hintText: 'E.g. Apples, Banana, 1 Bag of salt',
             enabledBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.white,
-              ),
+              borderSide: BorderSide(color: Colors.white),
             ),
             focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: _currentColor,
-              ),
+              borderSide: BorderSide(color: _currentColor),
             ),
             border: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: _currentColor,
-              ),
+              borderSide: BorderSide(color: _currentColor),
             ),
           ),
         ),
@@ -228,7 +235,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
           ],
         ),
-        Text(DateFormat('yyyy-MM-dd').format(_dueDate)),
+        Text('${DateFormat('yyyy-MM-dd').format(_dueDate)}'),
       ],
     );
   }
@@ -261,7 +268,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
           ],
         ),
-        Text(_timeOfDay.format(context)),
+        Text('${_timeOfDay.format(context)}'),
       ],
     );
   }

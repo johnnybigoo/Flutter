@@ -4,25 +4,38 @@ import 'package:provider/provider.dart';
 import '../components/circle_image.dart';
 import '../models/models.dart';
 
-import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:url_launcher/url_launcher.dart';
-import 'dart:io';
-
 class ProfileScreen extends StatefulWidget {
+  static MaterialPage page(User user) {
+    return MaterialPage(
+      name: FooderlichPages.profilePath,
+      key: ValueKey(FooderlichPages.profilePath),
+      child: ProfileScreen(user: user),
+    );
+  }
+
   final User user;
-  final int currentTab;
-  const ProfileScreen(
-      {super.key, required this.user, required this.currentTab});
+  const ProfileScreen({
+    Key? key,
+    required this.user,
+  }) : super(key: key);
 
   @override
-  ProfileScreenState createState() => ProfileScreenState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.close),
+          onPressed: () {
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnProfile(false);
+          },
+        ),
+      ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,12 +57,9 @@ class ProfileScreenState extends State<ProfileScreen> {
         buildDarkModeRow(),
         ListTile(
           title: const Text('View raywenderlich.com'),
-          onTap: () async {
-            if (kIsWeb || Platform.isMacOS) {
-              await launchUrl(Uri.parse('https://www.raywenderlich.com/'));
-            } else {
-              // TODO: Navigate to WebView
-            }
+          onTap: () {
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnRaywenderlich(true);
           },
         ),
         ListTile(
@@ -95,9 +105,7 @@ class ProfileScreenState extends State<ProfileScreen> {
         const SizedBox(height: 16.0),
         Text(
           widget.user.firstName,
-          style: const TextStyle(
-            fontSize: 21,
-          ),
+          style: const TextStyle(fontSize: 21),
         ),
         Text(widget.user.role),
         Text(

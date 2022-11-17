@@ -1,48 +1,52 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'models.dart';
 
-//1
+import 'package:flutter/material.dart';
+
+// 1
 class FooderlichTab {
   static const int explore = 0;
   static const int recipes = 1;
   static const int toBuy = 2;
 }
 
-// AppStateManager mocks the various app state such as app initialization,
-// app login, and onboarding.
 class AppStateManager extends ChangeNotifier {
-  // Checks to see if the user is logged in
+  // 2
+  bool _initialized = false;
+  // 3
   bool _loggedIn = false;
-  // Checks to see if the user has completed onboarding
+  // 4
   bool _onboardingComplete = false;
-  // Records the current tab the user is on.
+  // 5
   int _selectedTab = FooderlichTab.explore;
-  // Stores user state properties on platform specific file system.
-  final _appCache = AppCache();
 
-  // Property getters.
+  // 5
+  bool get isInitialized => _initialized;
   bool get isLoggedIn => _loggedIn;
   bool get isOnboardingComplete => _onboardingComplete;
   int get getSelectedTab => _selectedTab;
 
-  // Initializes the app
-  Future<void> initializeApp() async {
-    // Check if the user is logged in
-    _loggedIn = await _appCache.isUserLoggedIn();
-    // Check if the user completed onboarding
-    _onboardingComplete = await _appCache.didCompleteOnboarding();
+  void initializeApp() {
+    // 7
+    Timer(
+      const Duration(milliseconds: 2000),
+      () {
+        // 8
+        _initialized = true;
+        // 9
+        notifyListeners();
+      },
+    );
   }
 
-  void login(String username, String password) async {
+  void login(String username, String password) {
+    // 10
     _loggedIn = true;
-    await _appCache.cacheUser();
+    // 11
     notifyListeners();
   }
 
-  void onboarded() async {
+  void completeOnboarding() {
     _onboardingComplete = true;
-    await _appCache.completeOnboarding();
     notifyListeners();
   }
 
@@ -56,15 +60,16 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  void logout() async {
-    // Reset all properties once user logs out
+  void logout() {
+    // 12
     _loggedIn = false;
     _onboardingComplete = false;
+    _initialized = false;
     _selectedTab = 0;
 
-    // Reinitialize the app
-    await _appCache.invalidate();
-    await initializeApp();
+    // 13
+    initializeApp();
+    // 14
     notifyListeners();
   }
 }

@@ -8,9 +8,9 @@ class Card2 extends StatelessWidget {
   final ExploreRecipe recipe;
 
   const Card2({
-    super.key,
+    Key? key,
     required this.recipe,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

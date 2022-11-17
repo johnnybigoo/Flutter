@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/models.dart';
-import 'screens.dart';
+import 'empty_grocery_screen.dart';
+import 'grocery_list_screen.dart';
 
 class GroceryScreen extends StatelessWidget {
-  const GroceryScreen({super.key});
+  const GroceryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,8 @@ class GroceryScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          Provider.of<GroceryManager>(context, listen: false).createNewItem();
+          final manager = Provider.of<GroceryManager>(context, listen: false);
+          manager.createNewItem();
         },
       ),
       body: buildGroceryScreen(),

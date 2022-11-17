@@ -7,9 +7,9 @@ class RecipesGridView extends StatelessWidget {
   final List<SimpleRecipe> recipes;
 
   const RecipesGridView({
-    super.key,
+    Key? key,
     required this.recipes,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

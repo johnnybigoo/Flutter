@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../models/models.dart';
+
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+  static MaterialPage page() {
+    return MaterialPage(
+      name: FooderlichPages.onboardingPath,
+      key: ValueKey(FooderlichPages.onboardingPath),
+      child: const OnboardingScreen(),
+    );
+  }
+
+  const OnboardingScreen({Key? key}) : super(key: key);
 
   @override
-  OnboardingScreenState createState() => OnboardingScreenState();
+  _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
-class OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   final controller = PageController();
   final Color rwColor = const Color.fromRGBO(64, 143, 77, 1);
 
@@ -19,6 +30,15 @@ class OnboardingScreenState extends State<OnboardingScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: const Text('Getting Started'),
+        leading: GestureDetector(
+          child: const Icon(
+            Icons.chevron_left,
+            size: 35,
+          ),
+          onTap: () {
+            Navigator.pop(context, true);
+          },
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -39,7 +59,8 @@ class OnboardingScreenState extends State<OnboardingScreen> {
         MaterialButton(
           child: const Text('Skip'),
           onPressed: () {
-            // TODO: Initiate onboarding
+            Provider.of<AppStateManager>(context, listen: false)
+                .completeOnboarding();
           },
         ),
       ],
@@ -54,14 +75,10 @@ class OnboardingScreenState extends State<OnboardingScreen> {
           const AssetImage('assets/fooderlich_assets/recommend.png'),
           '''Check out weekly recommended recipes and what your friends are cooking!''',
         ),
-        onboardPageView(
-          const AssetImage('assets/fooderlich_assets/sheet.png'),
-          'Cook with step by step instructions!',
-        ),
-        onboardPageView(
-          const AssetImage('assets/fooderlich_assets/list.png'),
-          'Keep track of what you need to buy',
-        ),
+        onboardPageView(const AssetImage('assets/fooderlich_assets/sheet.png'),
+            'Cook with step by step instructions!'),
+        onboardPageView(const AssetImage('assets/fooderlich_assets/list.png'),
+            'Keep track of what you need to buy'),
       ],
     );
   }
@@ -95,9 +112,7 @@ class OnboardingScreenState extends State<OnboardingScreen> {
     return SmoothPageIndicator(
       controller: controller,
       count: 3,
-      effect: WormEffect(
-        activeDotColor: rwColor,
-      ),
+      effect: WormEffect(activeDotColor: rwColor),
     );
   }
 }

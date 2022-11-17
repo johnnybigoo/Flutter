@@ -9,17 +9,17 @@ class AuthorCard extends StatefulWidget {
   final ImageProvider? imageProvider;
 
   const AuthorCard({
-    super.key,
+    Key? key,
     required this.authorName,
     required this.title,
     this.imageProvider,
-  });
+  }) : super(key: key);
 
   @override
-  AuthorCardState createState() => AuthorCardState();
+  _AuthorCardState createState() => _AuthorCardState();
 }
 
-class AuthorCardState extends State<AuthorCard> {
+class _AuthorCardState extends State<AuthorCard> {
   bool _isFavorited = false;
 
   @override
