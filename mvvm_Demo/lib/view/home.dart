@@ -12,19 +12,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ListPictureViewModel listPictureViewModel = new ListPictureViewModel();
+  ListPictureViewModel listPictureViewModel = ListPictureViewModel();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Picsum'),
+        title: const Text('Picsum'),
       ),
       body: FutureBuilder(
         future: listPictureViewModel.fetchPictures(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else {
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 child: FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage,
                   image:
-                      '${listPictureViewModel.pictures![index].picSumModel!.downloadUrl}',
+                      '${listPictureViewModel.pictures![index].picSumModel.downloadUrl}',
                   fit: BoxFit.contain,
                 ),
               ),

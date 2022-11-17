@@ -12,7 +12,7 @@ class ListPictureViewModel {
 }
 
 class PictureViewModel {
-  final PicSumModel? picSumModel;
+  final PicSumModel picSumModel;
 
   PictureViewModel(this.picSumModel);
 }
