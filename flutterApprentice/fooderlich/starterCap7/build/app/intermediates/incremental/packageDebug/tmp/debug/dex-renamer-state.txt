@@ -1,0 +1,4 @@
+#Mon Nov 14 23:35:09 EST 2022
+base.0=C\:\\Users\\Jones\\Documents\\PROJECTS\\Flutter-PRIVATE\\flutterApprentice\\fooderlich\\starterCap7\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
