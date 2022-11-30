@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new, prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +40,11 @@ class _RootPageState extends State<RootPage> {
         title: Text('MyApp'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          debugPrint('Pressed!');
+        },
+        // ignore: prefer_const_constructors
+        child: Icon(Icons.add),
       ),
     );
   }
