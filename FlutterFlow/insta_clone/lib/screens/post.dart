@@ -19,7 +19,12 @@ class _PostWidgetState extends State<PostWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Color.fromARGB(
+        255,
+        120,
+        166,
+        166,
+      ), //FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
         backgroundColor: Color(0xFF868E93),
         iconTheme: IconThemeData(color: Color(0xFFF8F9FA)),
@@ -55,7 +60,10 @@ class _PostWidgetState extends State<PostWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                       child: Text(
                         '_CatZika',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: Color.fromARGB(255, 16, 18, 19),
+                        ),
                       ),
                     ),
                   ],
@@ -108,22 +116,23 @@ class _PostWidgetState extends State<PostWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Text(
                       '_CatZika',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.bold,
-                          ),
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                       child: Text(
                         'test test test test test test test',
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.normal,
-                            ),
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
                     ),
                   ],
@@ -135,8 +144,4 @@ class _PostWidgetState extends State<PostWidget> {
       ),
     );
   }
-}
-
-class FlutterFlowTheme {
-  static of(BuildContext context) {}
 }

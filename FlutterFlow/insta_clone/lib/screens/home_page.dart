@@ -1,7 +1,10 @@
 // import '../flutter_flow/flutter_flow_theme.dart';
 // import '../flutter_flow/flutter_flow_util.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:from_css_color/from_css_color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:insta_clone/screens/post.dart';
 
@@ -28,7 +31,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Color.fromRGBO(241, 244, 248, 100),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -45,6 +48,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       width: 90,
                       height: 90,
                       clipBehavior: Clip.antiAlias,
+                      // ignore: prefer_const_constructors
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
@@ -55,64 +59,61 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text(
                           '499',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           'Posts',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ],
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text(
                           '4999',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           'Followers',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ],
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text(
                           '999',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           'Following',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ],
                     ),
@@ -128,34 +129,30 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text(
                           '_CatZika',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           'Flutter Developer',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: 'Poppins',
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                fontWeight: FontWeight.normal,
-                              ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Color.fromRGBO(87, 99, 108, 100),
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                         Text(
                           'thecat_zika@dev.com',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF2F59E7),
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF2F59E7),
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ],
                     ),
@@ -172,12 +169,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       children: [
                         TabBar(
                           labelColor: FlutterFlowTheme.of(context).primaryColor,
-                          labelStyle:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 14,
-                                    lineHeight: 0.005,
-                                  ),
+                          labelStyle: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 14,
+                            height: 0.005,
+                          ),
                           indicatorColor:
                               FlutterFlowTheme.of(context).secondaryColor,
                           tabs: [
