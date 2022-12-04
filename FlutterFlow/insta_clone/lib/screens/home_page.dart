@@ -23,7 +23,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
     super.initState();
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      context.pushNamed('post');
+      //context.pushNamed('post');
     });
   }
 
@@ -31,7 +31,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color.fromRGBO(241, 244, 248, 100),
+      backgroundColor: Color.fromARGB(255, 250, 250, 250),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -168,31 +168,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     child: Column(
                       children: [
                         TabBar(
-                          labelColor: FlutterFlowTheme.of(context).primaryColor,
+                          labelColor: Color.fromRGBO(16, 18, 19, 255),
                           labelStyle: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 14,
                             height: 0.005,
                           ),
-                          indicatorColor:
-                              FlutterFlowTheme.of(context).secondaryColor,
+                          indicatorColor: Color.fromRGBO(57, 210, 192, 255),
+                          // ignore: prefer_const_literals_to_create_immutables
                           tabs: [
                             Tab(
                               icon: Icon(
                                 Icons.grid_on_sharp,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: Color.fromRGBO(16, 18, 19, 255),
                               ),
                             ),
                             Tab(
                               icon: Icon(
                                 Icons.play_circle_outline,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: Color.fromRGBO(16, 18, 19, 255),
                               ),
                             ),
                             Tab(
                               icon: Icon(
                                 Icons.person_rounded,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: Color.fromRGBO(16, 18, 19, 255),
                               ),
                             ),
                           ],
@@ -214,7 +214,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 children: [
                                   InkWell(
                                     onTap: () async {
-                                      context.pushNamed('post');
+                                      //context.pushNamed('post');
                                     },
                                     child: Image.network(
                                       'https://picsum.photos/seed/740/600',

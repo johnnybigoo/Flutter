@@ -26,7 +26,7 @@ class _PostWidgetState extends State<PostWidget> {
         166,
       ), //FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: Color(0xFF868E93),
+        backgroundColor: Color.fromARGB(255, 250, 250, 250),
         iconTheme: IconThemeData(color: Color(0xFFF8F9FA)),
         automaticallyImplyLeading: true,
         actions: [],
