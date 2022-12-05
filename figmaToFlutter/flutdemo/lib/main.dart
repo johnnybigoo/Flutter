@@ -1,12 +1,14 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:flutterapp/flutdemoapp/generatedframe2widget/GeneratedFrame2Widget.dart';
-import 'package:flutterapp/flutdemoapp/generatedframe1widget/GeneratedFrame1Widget.dart';
+import 'package:flutterapp/figtoflutapp/generatedframe2widget/GeneratedFrame2Widget.dart';
+import 'package:flutterapp/figtoflutapp/generatedframe1widget/GeneratedFrame1Widget.dart';
 
 void main() {
-  runApp(flutdemoApp());
+  runApp(figtoflutApp());
 }
 
-class flutdemoApp extends StatelessWidget {
+class figtoflutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
