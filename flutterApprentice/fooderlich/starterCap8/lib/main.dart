@@ -57,6 +57,7 @@ class _FooderlichState extends State<Fooderlich> {
           }
           // TODO: Replace with Material.router
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: theme,
             title: 'Fooderlich',
             home: Router(
