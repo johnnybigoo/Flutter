@@ -13,6 +13,12 @@ uses-sdk
 INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
 INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
+INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
+INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
+		ADDED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
 		ADDED from C:\Development\flutter\.pub-cache\hosted\pub.dartlang.org\webview_flutter_android-2.10.4\android\src\main\AndroidManifest.xml
