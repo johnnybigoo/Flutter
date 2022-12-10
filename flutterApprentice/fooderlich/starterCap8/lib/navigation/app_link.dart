@@ -1,8 +1,11 @@
+import 'package:flutter/foundation.dart';
+
 class AppLink {
   // 1
   static const String kHomePath = '/home';
   static const String kOnboardingPath = '/onboarding';
   static const String kLoginPath = '/login';
+  static const String kProfilePath = '/profile';
   static const String kItemPath = '/item';
   // 2
   static const String kTabParam = '/tab';
@@ -40,6 +43,41 @@ class AppLink {
     // 6
     return link;
   }
-// TODO: Add toLocation
 
+  String toLocation() {
+    // 1
+    String addKeyValPair({
+      required String key,
+      String? value,
+    }) =>
+        value == null ? '' : '${key}=$value&';
+    // 2
+    switch (location) {
+      // 3
+      case kLoginPath:
+        return kLoginPath;
+      // 4
+      case kOnboardingPath:
+        return kOnboardingPath;
+      // 5
+      case kProfilePath:
+        return kProfilePath;
+      // 6
+      case kItemPath:
+        var loc = '$kItemPath?';
+        loc += addKeyValPair(
+          key: kTabParam,
+          value: currentTab.toString(),
+        );
+        return Uri.encodeFull(loc);
+      // 7
+      default:
+        var loc = '$kHomePath?';
+        loc += addKeyValPair(
+          key: kTabParam,
+          value: currentTab.toString(),
+        );
+        return Uri.encodeFull(loc);
+    }
+  }
 }
