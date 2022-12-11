@@ -93,9 +93,33 @@ class AppRouter extends RouterDelegate<AppLink>
     return true;
   }
 
-  // TODO: Convert app state to applink
+  @override
+  AppLink get currentConfiguration => getCurrentPath();
 
-  // TODO: Apply configuration helper
+  AppLink getCurrentPath() {
+    // 1
+    if (!appStateManager.isLoggedIn) {
+      return AppLink(location: AppLink.kLoginPath);
+      // 2
+    } else if (!appStateManager.isOnboardingComplete) {
+      return AppLink(location: AppLink.kProfilePath);
+      // 3
+    } else if (profileManager.didSelectUser) {
+      return AppLink(location: AppLink.kProfilePath);
+      // 4
+    } else if (groceryManager.isCreatingNewItem) {
+      return AppLink(location: AppLink.kItemPath);
+      // 5
+    } else if (groceryManager.selectedGroceryItem != null) {
+      final id = groceryManager.selectedGroceryItem?.id;
+      return AppLink(location: AppLink.kItemPath, itemId: id);
+      // 6
+    } else {
+      return AppLink(
+          location: AppLink.kHomePath,
+          currentTab: appStateManager.getSelectedTab);
+    }
+  }
 
   // 1
   @override
