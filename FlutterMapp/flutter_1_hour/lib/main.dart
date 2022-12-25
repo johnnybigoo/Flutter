@@ -43,7 +43,7 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter'),
+        title: Text('Flutter in 1 hour'),
       ),
       body: pages[currrentPage],
       floatingActionButton: FloatingActionButton(
