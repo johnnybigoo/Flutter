@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_1_hour/home_page.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -32,17 +33,32 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
+  int currrentPage = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter'),
       ),
+      body: HomePage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('Floating Action Button');
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: NavigationBar(
+        // ignore: prefer_const_literals_to_create_immutables
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+        onDestinationSelected: (int index) {
+          setState(() {
+            currrentPage = index;
+          });
+        },
+        selectedIndex: currrentPage,
       ),
     );
   }
