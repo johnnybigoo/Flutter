@@ -2,35 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BNavigationBar extends StatefulWidget {
+  const BNavigationBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      // ignore: prefer_const_constructors
-      home: RootPage(),
-    );
-  }
+  State<BNavigationBar> createState() => _BNavigationBarState();
 }
 
-class RootPage extends StatefulWidget {
-  const RootPage({super.key});
-
-  @override
-  State<RootPage> createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
+class _BNavigationBarState extends State<BNavigationBar> {
   int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
