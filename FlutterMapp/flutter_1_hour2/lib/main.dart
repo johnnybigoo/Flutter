@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
-import 'package:flutter_1_hour2/widgets_week/index.dart';
+import 'package:flutter_1_hour2/screens/index_widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       // ignore: prefer_const_constructors
-      home: Index(),
+      home: IndexWidgets(),
     );
   }
 }
