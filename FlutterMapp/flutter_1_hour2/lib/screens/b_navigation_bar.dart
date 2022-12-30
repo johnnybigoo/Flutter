@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:flutter_1_hour2/model/widgets_list.dart';
 
 class BNavigationBar extends StatefulWidget {
   const BNavigationBar({super.key});

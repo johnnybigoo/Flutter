@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_1_hour2/model/widgets_list.dart';
+import 'package:flutter_1_hour2/screens/b_navigation_bar.dart';
 
 class IndexWidgets extends StatelessWidget {
   const IndexWidgets({super.key});
@@ -10,16 +13,22 @@ class IndexWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Index of Widgets'),
+        title: Center(
+          child: Text('Index of Widgets'),
+        ),
       ),
       body: ListView.builder(
         itemCount: widgets.length,
         itemBuilder: (context, index) {
-          WidgetsList widget = widgets[index];
-          return ListTile(
-            title: Text(widget.title),
-            leading: Icon(Icons.widgets),
-            trailing: Icon(Icons.arrow_forward),
+          return Card(
+            child: ListTile(
+              title: Text(widgets[index].title),
+              leading: Icon(Icons.now_widgets_outlined),
+              trailing: Icon(
+                Icons.arrow_forward_rounded,
+              ),
+              onTap: () {},
+            ),
           );
         },
       ),
