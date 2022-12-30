@@ -17,7 +17,7 @@ class _BNavigationBarState extends State<BNavigationBar> {
     return Scaffold(
       appBar: AppBar(
         // ignore: prefer_const_constructors
-        title: Text('MyApp'),
+        title: Text('bottomNavigationBar'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
