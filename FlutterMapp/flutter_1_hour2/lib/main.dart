@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_new, prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:flutter_1_hour2/model/on_tap_navigation.dart';
 import 'package:flutter_1_hour2/screens/index_widgets.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       // ignore: prefer_const_constructors
-      home: IndexWidgets(),
+      home: HomeScreen(),
     );
   }
 }

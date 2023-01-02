@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_1_hour2/model/on_tap_navigation.dart';
 import 'package:flutter_1_hour2/model/widgets_list.dart';
 import 'package:flutter_1_hour2/screens/b_navigation_bar.dart';
 
@@ -27,7 +26,14 @@ class IndexWidgets extends StatelessWidget {
               trailing: Icon(
                 Icons.arrow_forward_rounded,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) => HomeScreen()),
+                  ),
+                );
+              },
             ),
           );
         },
