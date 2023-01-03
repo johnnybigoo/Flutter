@@ -69,4 +69,3 @@ Map<String, dynamic> _$APIIngredientsToJson(APIIngredients instance) =>
       'text': instance.name,
       'weight': instance.weight,
     };
- Save
