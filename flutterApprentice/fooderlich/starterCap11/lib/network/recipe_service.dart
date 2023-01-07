@@ -1,9 +1,9 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
 
-var apiKey = dotenv.get('apiKey');
-var apiId = dotenv.env['apiId'];
-var apiUrl = dotenv.env['apiUrl'];
+var apiKey = dotenv.get('APIKEY');
+var apiId = dotenv.env['APIID'];
+var apiUrl = dotenv.env['APIURL'];
 
 class RecipeService {
   // 1

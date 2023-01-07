@@ -225,7 +225,7 @@ class _RecipeListState extends State<RecipeList> {
         ));
       },
       // TODO: Replace with recipeCard
-      child: recipeStringCard(recipe.image, recipe.label),
+      child: recipeCard(recipe),
     );
   }
 }

@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   int _counter = 0;
 
   void _incrementCounter() {
-    print(dotenv.env['VAR_NAME']);
+    print(dotenv.env['apiKey']);
   }
 
   int _selectedIndex = 0;
