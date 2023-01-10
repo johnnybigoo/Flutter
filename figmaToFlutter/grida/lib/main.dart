@@ -58,63 +58,67 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(),
-      body: Stack(
-        children: [
-          Positioned(
-            left: 23,
-            top: 651,
-            child: Container(
-              width: 148,
-              height: 62,
-              decoration: const BoxDecoration(
-                color: Color(
-                  0xfff8e114,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(
-                      0x3f000000,
-                    ),
-                    offset: Offset(
-                      0,
-                      4,
-                    ),
-                    blurRadius: 4,
+      appBar: AppBar(
+        title: const Text("Grida plugin"),
+      ),
+      body: Center(
+        child: Stack(
+          children: [
+            Positioned(
+              left: 23,
+              top: 651,
+              child: Container(
+                width: 148,
+                height: 62,
+                decoration: const BoxDecoration(
+                  color: Color(
+                    0xfff8e114,
                   ),
-                ],
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(
+                        0xff2aa60b,
+                      ),
+                      offset: Offset(
+                        0,
+                        4,
+                      ),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Positioned(
-            left: 219,
-            top: 651,
-            child: Container(
-              width: 148,
-              height: 62,
-              decoration: const BoxDecoration(
-                color: Color(
-                  0xff2aa60b,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(
-                      0xff2aa60b,
-                    ),
-                    offset: Offset(
-                      0,
-                      4,
-                    ),
-                    blurRadius: 4,
+            Positioned(
+              left: 219,
+              top: 651,
+              child: Container(
+                width: 148,
+                height: 62,
+                decoration: const BoxDecoration(
+                  color: Color(
+                    0xff2aa60b,
                   ),
-                ],
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(
+                        0xff2aa60b,
+                      ),
+                      offset: Offset(
+                        0,
+                        4,
+                      ),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
 
-          /// stack requires empty non positioned widget to work properly. refer: https://github.com/flutter/flutter/issues/49631#issuecomment-582090992
-          Container(),
-        ],
+            /// stack requires empty non positioned widget to work properly. refer: https://github.com/flutter/flutter/issues/49631#issuecomment-582090992
+            Container(),
+          ],
+        ),
       ),
     );
   }
