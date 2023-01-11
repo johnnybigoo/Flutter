@@ -1,3 +1,5 @@
+import 'dart:math';
+
 // this is a comment
 /*
   This is a multiple...
@@ -11,5 +13,9 @@
   */
 
 int calculate() {
-  return 6 * 7;
+  return 6 + 7;
 }
+
+double seno = sin(45 * pi / 180);
+double coseno = cos(45 * pi / 180);
+double raizQ = sqrt(2);
