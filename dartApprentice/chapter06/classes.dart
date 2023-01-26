@@ -1,8 +1,11 @@
 void main() {
-  final user = User();
-  user.name = 'Ray';
-  user.id = 42;
+  final user = User()
+    ..name = 'Josh'
+    ..id = 44;
+  // user.name = 'Ray';
+  // user.id = 42;
   print(user);
+  print(user.toJson());
 }
 
 class User {
@@ -12,5 +15,10 @@ class User {
   @override
   String toString() {
     return 'User(id: $id, name: $name)';
+  }
+
+  // Serialization
+  String toJson() {
+    return '{"id":$id, "name":"$name"}';
   }
 }
