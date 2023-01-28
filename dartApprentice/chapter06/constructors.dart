@@ -1,41 +1,25 @@
+import 'user.dart';
+
 void main() {
-  final user = User(42, 'Ray');
+  const user = User(id: 42, name: 'Ray');
+  final vicki = User(id: 24, name: 'Vicki');
+  // vicki._name = 'Nefarious Hacker';
+
   print(user.toJson());
 
-  final anoynmousUser = User.anonymous();
-  print(anoynmousUser);
+  const anonymousUser = User.anonymous();
+
+  print(anonymousUser);
+
+  final jb = User(id: -1, name: 'JB Lorenzo');
+  print(jb);
+
+  final map = {'id': 10, 'name': 'Manda'};
+  final manda = User.fromJson(map);
+  print(manda);
 }
 
 class Address {
   Address();
   var value = '';
-}
-
-class User {
-  // User(int id, String name) {
-  //   this.id = id;
-  //   this.name = name;
-  // }
-  User(this.id, this.name);
-
-  @override
-  String toString() {
-    return 'User(id: $id, name: $name)';
-  }
-
-  // User.anonymous() {
-  //   id = 0;
-  //   name = 'anonymous';
-  // }
-
-  User.anonymous() : this(0, 'anonymous');
-
-  // int id = 0;
-  // String name = '';
-  int id;
-  String name;
-
-  String toJson() {
-    return '{"id":$id, "name":"$name"}';
-  }
 }
