@@ -9,6 +9,7 @@ import '../colors.dart';
 import '../recipe_card.dart';
 import '../widgets/custom_dropdown.dart';
 import 'recipe_details.dart';
+import '../../network/recipe_service.dart';
 
 class RecipeList extends StatefulWidget {
   const RecipeList({Key? key}) : super(key: key);
@@ -23,8 +24,7 @@ class _RecipeListState extends State<RecipeList> {
   late TextEditingController searchTextController;
   final ScrollController _scrollController = ScrollController();
 
-  // TODO: Replace with new API class
-  List currentSearchList = [];
+  List<APIHits> currentSearchList = [];
   int currentCount = 0;
   int currentStartPosition = 0;
   int currentEndPosition = 20;
@@ -63,7 +63,15 @@ class _RecipeListState extends State<RecipeList> {
       });
   }
 
-  // TODO: Add getRecipeData() here
+  // 1
+  Future<APIRecipeQuery> getRecipeData(String query, int from, int to) async {
+    // 2
+    final recipeJson = await RecipeService().getRecipes(query, from, to);
+    // 3
+    final recipeMap = json.decode(recipeJson);
+    // 4
+    return APIRecipeQuery.fromJson(recipeMap);
+  }
 
   // TODO: Delete loadRecipes()
   Future loadRecipes() async {
