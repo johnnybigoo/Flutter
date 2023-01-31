@@ -13,8 +13,8 @@ class User {
   // User({this.id = 0, this.name = 'anonymous'});
 
   const User({int id = 0, String name = 'anonymous'})
-      : assert(id >= 0),
-        _id = id,
+      // : assert(id >= 0),
+        : _id = id,
         _name = name;
   // : _id = id,
   //   _name = name;
