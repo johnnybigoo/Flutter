@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:dw9_delivery_app/app/core/ui/styles/colors_app.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -16,12 +17,22 @@ class SplashPage extends StatelessWidget {
           centerTitle: true,
           iconTheme: IconThemeData(color: Colors.black),
         ),
+        primaryColor: ColorsApp.i.primary,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: ColorsApp.i.primary,
+          secondary: ColorsApp.i.secondary,
+        ),
       ),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Splash'),
         ),
-        body: Container(),
+        body: Column(
+          children: [
+            Container(),
+            ElevatedButton(onPressed: () {}, child: Text('Test'))
+          ],
+        ),
       ),
     );
   }
