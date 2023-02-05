@@ -17,7 +17,12 @@ class SplashPage extends StatelessWidget {
       body: Column(
         children: [
           Container(),
-          DeliveryButton(),
+          DeliveryButton(
+            width: 200,
+            height: 200,
+            label: 'Teste Label',
+            onPressed: () {},
+          ),
           TextFormField(
             decoration: InputDecoration(labelText: 'text'),
           ),
