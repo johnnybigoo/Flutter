@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:dw9_delivery_app/app/core/ui/styles/app_styles.dart';
-import 'package:dw9_delivery_app/app/core/ui/styles/colors_app.dart';
 import 'package:dw9_delivery_app/app/core/ui/widgets/delivery_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../core/config/env/env.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
           DeliveryButton(
             width: 200,
             height: 200,
-            label: 'Teste Label',
+            label: Env.i['backend_base_url'] ?? '',
             onPressed: () {},
           ),
           TextFormField(
