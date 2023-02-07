@@ -36,3 +36,4 @@ flutter:
     - assets/recipes1.json
     - assets/recipes2.json
     - assets/images/
+    - lib/.env
