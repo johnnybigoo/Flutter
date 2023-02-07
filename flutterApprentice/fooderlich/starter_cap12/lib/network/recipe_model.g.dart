@@ -36,8 +36,8 @@ APIHits _$APIHitsFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$APIHitsToJson(APIHits instance) => <String, dynamic>{
-      'recipe': instance.recipe,
-    };
+  'recipe': instance.recipe,
+};
 
 APIRecipe _$APIRecipeFromJson(Map<String, dynamic> json) {
   return APIRecipe(
@@ -54,14 +54,14 @@ APIRecipe _$APIRecipeFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$APIRecipeToJson(APIRecipe instance) => <String, dynamic>{
-      'label': instance.label,
-      'image': instance.image,
-      'url': instance.url,
-      'ingredients': instance.ingredients,
-      'calories': instance.calories,
-      'totalWeight': instance.totalWeight,
-      'totalTime': instance.totalTime,
-    };
+  'label': instance.label,
+  'image': instance.image,
+  'url': instance.url,
+  'ingredients': instance.ingredients,
+  'calories': instance.calories,
+  'totalWeight': instance.totalWeight,
+  'totalTime': instance.totalTime,
+};
 
 APIIngredients _$APIIngredientsFromJson(Map<String, dynamic> json) {
   return APIIngredients(
