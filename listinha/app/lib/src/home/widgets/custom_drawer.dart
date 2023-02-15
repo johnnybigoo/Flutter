@@ -43,7 +43,7 @@ class CustomDrawer extends StatelessWidget {
             child: Row(
               children: [
                 const Text('Sincronizar'),
-                Spacer(),
+                const Spacer(),
                 Text(
                   syncDateText,
                   style: Theme.of(context).textTheme.bodySmall,
