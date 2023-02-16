@@ -1,12 +1,17 @@
 import 'package:chopper/chopper.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'recipe_model.dart';
 import 'model_response.dart';
 import 'model_converter.dart';
 
 part 'recipe_service.chopper.dart';
 
-const String apiKey = '<Your Key Here>';
-const String apiId = '<Your Id here>';
+// const String apiKey = '<Your Key Here>';
+// const String apiId = '<Your Id here>';
+// const String apiUrl = 'https://api.edamam.com';
+
+var apiKey = dotenv.get('APIKEY');
+var apiId = dotenv.env['APIID'];
 const String apiUrl = 'https://api.edamam.com';
 
 @ChopperApi()
