@@ -1,4 +1,4 @@
-package com.raywenderlich.recipe_finder
+package com.raywenderlich.starter_cap13
 
 import io.flutter.embedding.android.FlutterActivity
 
