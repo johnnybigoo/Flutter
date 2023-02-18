@@ -72,21 +72,23 @@ class _MyRecipesListState extends State<MyRecipesList> {
                   ),
                   actions: <Widget>[
                     IconSlideAction(
-                        caption: 'Delete',
-                        color: Colors.transparent,
-                        foregroundColor: Colors.black,
-                        iconWidget: const Icon(Icons.delete, color: Colors.red),
-                        // Update first onTap
-                        onTap: () => deleteRecipe(repository, recipe)),
+                      caption: 'Delete',
+                      color: Colors.transparent,
+                      foregroundColor: Colors.black,
+                      iconWidget: const Icon(Icons.delete, color: Colors.red),
+                      // Update first onTap
+                      onTap: () => deleteRecipe(repository, recipe),
+                    ),
                   ],
                   secondaryActions: <Widget>[
                     IconSlideAction(
-                        caption: 'Delete',
-                        color: Colors.transparent,
-                        foregroundColor: Colors.black,
-                        iconWidget: const Icon(Icons.delete, color: Colors.red),
-                        // Update second onTap
-                        onTap: () => deleteRecipe(repository, recipe)),
+                      caption: 'Delete',
+                      color: Colors.transparent,
+                      foregroundColor: Colors.black,
+                      iconWidget: const Icon(Icons.delete, color: Colors.red),
+                      // Update second onTap
+                      onTap: () => deleteRecipe(repository, recipe),
+                    ),
                   ],
                 ),
               );
