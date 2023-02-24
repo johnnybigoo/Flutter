@@ -9,13 +9,13 @@ class TaskCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final progress = 0.5;
-    final progressText = '1/5';
+    const progress = 0.5;
+    const progressText = '1/5';
     final title = board.title;
     final backgroundColor = Colors.red.withOpacity(0.5);
-    final color = Colors.red;
-    final statusText = 'Pendente';
-    final iconData = Icons.access_alarm;
+    const color = Colors.red;
+    const statusText = 'Pendente';
+    const iconData = Icons.access_alarm;
 
     return Container(
       height: 130,
