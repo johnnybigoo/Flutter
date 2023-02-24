@@ -28,7 +28,7 @@ class Scene extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.fromLTRB(32*fem, 83.33*fem, 24*fem, 16*fem),
                 width: 414*fem,
-                height: 271*fem,
+                height: 284*fem,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -336,7 +336,7 @@ class Scene extends StatelessWidget {
                           children: [
                             Container(
                               // janGYD (1:542)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 91*fem, 0*fem),
+                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 40*fem, 0*fem),
                               child: Text(
                                 'JAN',
                                 style: SafeGoogleFont (
@@ -456,7 +456,7 @@ class Scene extends StatelessWidget {
                             ),
                             Container(
                               // sepK4Z (1:550)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 41*fem, 0*fem),
+                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 40*fem, 0*fem),
                               child: Text(
                                 'SEP',
                                 style: SafeGoogleFont (
@@ -471,7 +471,7 @@ class Scene extends StatelessWidget {
                             ),
                             Container(
                               // octCu3 (1:551)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 41*fem, 0*fem),
+                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 40*fem, 0*fem),
                               child: Text(
                                 'OCT',
                                 style: SafeGoogleFont (
@@ -501,7 +501,7 @@ class Scene extends StatelessWidget {
                             ),
                             Text(
                               // deso89 (1:553)
-                              'DES',
+                              'DEC',
                               style: SafeGoogleFont (
                                 'Inter',
                                 fontSize: 14*ffem,
@@ -576,7 +576,7 @@ class Scene extends StatelessWidget {
                               'TOP SPENDING',
                               style: SafeGoogleFont (
                                 'Inter',
-                                fontSize: 18*ffem,
+                                fontSize: 16*ffem,
                                 fontWeight: FontWeight.w600,
                                 height: 1.2125*ffem/fem,
                                 letterSpacing: -0.36*fem,
@@ -683,7 +683,7 @@ class Scene extends StatelessWidget {
                             textAlign: TextAlign.right,
                             style: SafeGoogleFont (
                               'Inter',
-                              fontSize: 18*ffem,
+                              fontSize: 14*ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.2125*ffem/fem,
                               letterSpacing: -0.72*fem,
@@ -787,7 +787,7 @@ class Scene extends StatelessWidget {
                             textAlign: TextAlign.right,
                             style: SafeGoogleFont (
                               'Inter',
-                              fontSize: 18*ffem,
+                              fontSize: 14*ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.2125*ffem/fem,
                               letterSpacing: -0.72*fem,
@@ -883,7 +883,7 @@ class Scene extends StatelessWidget {
                             textAlign: TextAlign.right,
                             style: SafeGoogleFont (
                               'Inter',
-                              fontSize: 18*ffem,
+                              fontSize: 14*ffem,
                               fontWeight: FontWeight.w600,
                               height: 1.2125*ffem/fem,
                               letterSpacing: -0.72*fem,
@@ -945,12 +945,12 @@ class Scene extends StatelessWidget {
                           ),
                           Container(
                             // user11hfK (1:598)
-                            width: 34.75*fem,
-                            height: 36*fem,
+                            width: 30.75*fem,
+                            height: 30*fem,
                             child: Image.asset(
                               'assets/designs/images/user-1-1.png',
-                              width: 34.75*fem,
-                              height: 36*fem,
+                              width: 30.75*fem,
+                              height: 30*fem,
                             ),
                           ),
                         ],
@@ -969,64 +969,64 @@ class Scene extends StatelessWidget {
                 height: 16*fem,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      // timeV5P (1:603)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 264*fem, 0*fem),
-                      child: Text(
-                        '9:41',
-                        style: SafeGoogleFont (
-                          'SF Pro Text',
-                          fontSize: 12*ffem,
-                          fontWeight: FontWeight.w700,
-                          height: 1.2575*ffem/fem,
-                          letterSpacing: -0.2399999946*fem,
-                          color: Color(0xff222222),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      // group2MtH (1:604)
-                      margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 0*fem, 3*fem),
-                      height: double.infinity,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // combinedshaperq3 (1:605)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 4.47*fem, 0*fem),
-                            width: 16.5*fem,
-                            height: 10*fem,
-                            child: Image.asset(
-                              'assets/designs/images/combined-shape-Aow.png',
-                              width: 16.5*fem,
-                              height: 10*fem,
-                            ),
-                          ),
-                          Container(
-                            // combinedshapeXgH (1:610)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.95*fem, 0.5*fem),
-                            width: 14.05*fem,
-                            height: 10*fem,
-                            child: Image.asset(
-                              'assets/designs/images/combined-shape-5nm.png',
-                              width: 14.05*fem,
-                              height: 10*fem,
-                            ),
-                          ),
-                          Container(
-                            // batterycBw (1:614)
-                            width: 26.5*fem,
-                            height: 12*fem,
-                            child: Image.asset(
-                              'assets/designs/images/battery-upq.png',
-                              width: 26.5*fem,
-                              height: 12*fem,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                  children: const [
+                    // Container(
+                    //   // timeV5P (1:603)
+                    //   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 264*fem, 0*fem),
+                    //   child: Text(
+                    //     '9:41',
+                    //     style: SafeGoogleFont (
+                    //       'SF Pro Text',
+                    //       fontSize: 12*ffem,
+                    //       fontWeight: FontWeight.w700,
+                    //       height: 1.2575*ffem/fem,
+                    //       letterSpacing: -0.2399999946*fem,
+                    //       color: Color(0xff222222),
+                    //     ),
+                    //   ),
+                    // ),
+                    // Container(
+                    //   // group2MtH (1:604)
+                    //   margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 0*fem, 3*fem),
+                    //   height: double.infinity,
+                    //   child: Row(
+                    //     crossAxisAlignment: CrossAxisAlignment.center,
+                    //     children: [
+                    //       Container(
+                    //         // combinedshaperq3 (1:605)
+                    //         margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 4.47*fem, 0*fem),
+                    //         width: 16.5*fem,
+                    //         height: 10*fem,
+                    //         child: Image.asset(
+                    //           'assets/designs/images/combined-shape-Aow.png',
+                    //           width: 16.5*fem,
+                    //           height: 10*fem,
+                    //         ),
+                    //       ),
+                    //       Container(
+                    //         // combinedshapeXgH (1:610)
+                    //         margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 3.95*fem, 0.5*fem),
+                    //         width: 14.05*fem,
+                    //         height: 10*fem,
+                    //         child: Image.asset(
+                    //           'assets/designs/images/combined-shape-5nm.png',
+                    //           width: 14.05*fem,
+                    //           height: 10*fem,
+                    //         ),
+                    //       ),
+                    //       Container(
+                    //         // batterycBw (1:614)
+                    //         width: 26.5*fem,
+                    //         height: 12*fem,
+                    //         child: Image.asset(
+                    //           'assets/designs/images/battery-upq.png',
+                    //           width: 26.5*fem,
+                    //           height: 12*fem,
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
