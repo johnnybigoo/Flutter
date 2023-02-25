@@ -33,7 +33,10 @@ class HomePage extends StatelessWidget {
               ),
               itemCount: 100,
               itemBuilder: (_, index) {
-                final board = TaskBoard(Uuid.v4(), 'Nova List 1');
+                final board = TaskBoard(
+                  Uuid.v4(),
+                  'Nova lista de tarefas 1',
+                );
                 return TaskCard(board: board);
               },
               separatorBuilder: (context, index) {
