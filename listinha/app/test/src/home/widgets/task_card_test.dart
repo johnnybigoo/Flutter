@@ -13,13 +13,12 @@ void main() {
     final tasks = [
       Task(Uuid.v4(), '', completed: true),
       Task(Uuid.v4(), '', completed: true),
-      Task(Uuid.v4(), '', completed: true),
       Task(Uuid.v4(), ''),
       Task(Uuid.v4(), ''),
     ];
 
     final progress = TaskCard(board: board).getProgress(tasks);
 
-    expect(progress, 0.6);
+    expect(progress, 0.5);
   });
 }

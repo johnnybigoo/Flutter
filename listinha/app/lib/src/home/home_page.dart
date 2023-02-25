@@ -36,8 +36,14 @@ class HomePage extends StatelessWidget {
                 final board = TaskBoard(
                   Uuid.v4(),
                   'Nova lista de tarefas 1',
+                  tasks: [
+                    Task(Uuid.v4(), '', completed: true),
+                    Task(Uuid.v4(), '', completed: true),
+                    Task(Uuid.v4(), '', completed: false),
+                    Task(Uuid.v4(), '', completed: false),
+                  ],
                 );
-                return TaskCard(board: board);
+                return TaskCard(board: board, height: 140);
               },
               separatorBuilder: (context, index) {
                 return const SizedBox(height: 10);
