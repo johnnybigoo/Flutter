@@ -491,6 +491,20 @@
             </list>
           </value>
         </entry>
+        <entry key="rx_notifier">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rx_notifier-2.0.0+6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="rx_notifier_annotation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rx_notifier_annotation-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="sane_uuid">
           <value>
             <list>
@@ -784,6 +798,8 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/redis-3.1.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/result_dart-1.0.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rikulo_commons-5.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rx_notifier-2.0.0+6/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rx_notifier_annotation-1.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sane_uuid-1.0.0-alpha.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_modular-2.1.0/lib" />

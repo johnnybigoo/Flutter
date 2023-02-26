@@ -499,6 +499,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  rx_notifier:
+    dependency: "direct main"
+    description:
+      name: rx_notifier
+      sha256: "7d13430c7ecc114b074cdf66eda75bdde17978e3601763ecef09129cb0ed3df2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0+6"
+  rx_notifier_annotation:
+    dependency: transitive
+    description:
+      name: rx_notifier_annotation
+      sha256: "362496563d617aa6fa21ab9c131f66348f3266b6580d69ecc23d2c23a52070a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   sane_uuid:
     dependency: transitive
     description:
