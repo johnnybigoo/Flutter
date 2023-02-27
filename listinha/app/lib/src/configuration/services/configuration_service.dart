@@ -24,12 +24,12 @@ class ConfigurationServiceImpl implements ConfigurationService, Disposable {
   @override
   void init() {
     final model = _getConfiguration();
-    appStore.themeMode.value = _getThemeModeByName(model.themeModeName);
-    appStore.syncDate.value = model.syncDate;
+    appStore.themeMode = _getThemeModeByName(model.themeModeName);
+    appStore.syncDate = model.syncDate;
 
     disposer = rxObserver(() {
-      final themeMode = appStore.themeMode.value;
-      final syncDate = appStore.syncDate.value;
+      final themeMode = appStore.themeMode;
+      final syncDate = appStore.syncDate;
 
       _saveConfiguration(themeMode.name, syncDate);
     });
