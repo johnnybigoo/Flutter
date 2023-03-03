@@ -349,7 +349,7 @@ class Scene extends StatelessWidget {
               left: 26*fem,
               top: 540*fem,
               child: Container(
-                width: 117*fem,
+                width: 147*fem,
                 height: 50*fem,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -443,7 +443,7 @@ class Scene extends StatelessWidget {
               left: 26*fem,
               top: 606*fem,
               child: Container(
-                width: 121*fem,
+                width: 141*fem,
                 height: 50*fem,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -516,7 +516,7 @@ class Scene extends StatelessWidget {
               left: 26*fem,
               top: 672*fem,
               child: Container(
-                width: 137*fem,
+                width: 157*fem,
                 height: 51*fem,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -587,7 +587,7 @@ class Scene extends StatelessWidget {
               left: 26*fem,
               top: 739*fem,
               child: Container(
-                width: 135*fem,
+                width: 155*fem,
                 height: 51*fem,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -726,11 +726,11 @@ class Scene extends StatelessWidget {
             Positioned(
               // frame18C7f (1:2599)
               left: 1*fem,
-              top: 816*fem,
+              top: 794*fem,
               child: Container(
                 padding: EdgeInsets.fromLTRB(34.65*fem, 22*fem, 31.75*fem, 22*fem),
-                width: 413*fem,
-                height: 80*fem,
+                width: 414*fem,
+                height: 66*fem,
                 decoration: BoxDecoration (
                   color: Color(0xffffffff),
                   boxShadow: [
