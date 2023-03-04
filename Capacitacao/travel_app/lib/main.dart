@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
-import 'package:myapp/cover/cover.dart';
+// import 'package:myapp/cover/cover.dart';
 // import 'package:myapp/mockup-source/mockup-dribble.dart';
 // import 'package:myapp/mockup-source/free-source-code.dart';
 // import 'package:myapp/screens/home-page.dart';
-// import 'package:myapp/screens/detail-page.dart';
+import 'package:myapp/screens/detail-page.dart';
 
 void main() => runApp(MyApp());
 

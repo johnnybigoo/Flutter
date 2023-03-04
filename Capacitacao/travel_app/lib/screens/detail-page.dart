@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Scene extends StatelessWidget {
+  const Scene({super.key});
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Container(
         // detailpageauT (147:4060)
         width: double.infinity,
         height: 812*fem,
         decoration: BoxDecoration (
-          color: Color(0xffffffff),
+          color: const Color(0xffffffff),
           borderRadius: BorderRadius.circular(30*fem),
         ),
         child: Stack(
@@ -50,7 +49,7 @@ class Scene extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration (
                       borderRadius: BorderRadius.circular(26*fem),
-                      color: Color(0xffffffff),
+                      color: const Color(0xffffffff),
                     ),
                   ),
                 ),
@@ -92,7 +91,7 @@ class Scene extends StatelessWidget {
               // group306Jku (147:4073)
               left: 25*fem,
               top: 366.5*fem,
-              child: Container(
+              child: SizedBox(
                 width: 321*fem,
                 height: 48*fem,
                 child: Row(
@@ -116,7 +115,7 @@ class Scene extends StatelessWidget {
                                 fontSize: 18*ffem,
                                 fontWeight: FontWeight.w700,
                                 height: 1.2575*ffem/fem,
-                                color: Color(0xff2a2a2a),
+                                color: const Color(0xff2a2a2a),
                               ),
                             ),
                           ),
@@ -146,7 +145,7 @@ class Scene extends StatelessWidget {
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2575*ffem/fem,
-                                    color: Color(0xff1c9fe2),
+                                    color: const Color(0xff1c9fe2),
                                   ),
                                 ),
                               ],
@@ -173,7 +172,7 @@ class Scene extends StatelessWidget {
                                 fontSize: 24*ffem,
                                 fontWeight: FontWeight.w700,
                                 height: 1.2575*ffem/fem,
-                                color: Color(0xff2a2a2a),
+                                color: const Color(0xff2a2a2a),
                               ),
                             ),
                           ),
@@ -187,7 +186,7 @@ class Scene extends StatelessWidget {
                                 fontSize: 12*ffem,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2575*ffem/fem,
-                                color: Color(0xff8d94a2),
+                                color: const Color(0xff8d94a2),
                               ),
                             ),
                           ),
@@ -213,7 +212,7 @@ class Scene extends StatelessWidget {
                       fontSize: 18*ffem,
                       fontWeight: FontWeight.w700,
                       height: 1.2575*ffem/fem,
-                      color: Color(0xff2a2a2a),
+                      color: const Color(0xff2a2a2a),
                     ),
                   ),
                 ),
@@ -234,10 +233,10 @@ class Scene extends StatelessWidget {
                         fontSize: 14*ffem,
                         fontWeight: FontWeight.w400,
                         height: 1.2575*ffem/fem,
-                        color: Color(0xff8d94a2),
+                        color: const Color(0xff8d94a2),
                       ),
                       children: [
-                        TextSpan(
+                        const TextSpan(
                           text: 'The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok. A climb to the top is one of the most exhilarating experiences you can have in Indonesia. At 3,726 meters tall, Gunung Rinjani is the second highest mountain in Indonesia',
                         ),
                         TextSpan(
@@ -247,7 +246,7 @@ class Scene extends StatelessWidget {
                             fontSize: 14*ffem,
                             fontWeight: FontWeight.w400,
                             height: 1.2575*ffem/fem,
-                            color: Color(0xff1c9fe2),
+                            color: const Color(0xff1c9fe2),
                           ),
                         ),
                       ],
@@ -339,7 +338,7 @@ class Scene extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration (
                       borderRadius: BorderRadius.circular(8*fem),
-                      color: Color(0xff1c9fe2),
+                      color: const Color(0xff1c9fe2),
                     ),
                   ),
                 ),
@@ -360,7 +359,7 @@ class Scene extends StatelessWidget {
                       fontSize: 14*ffem,
                       fontWeight: FontWeight.w700,
                       height: 1.2575*ffem/fem,
-                      color: Color(0xffffffff),
+                      color: const Color(0xffffffff),
                     ),
                   ),
                 ),
@@ -377,7 +376,7 @@ class Scene extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration (
                       borderRadius: BorderRadius.circular(4*fem),
-                      color: Color(0xfff6f8fa),
+                      color: const Color(0xfff6f8fa),
                     ),
                   ),
                 ),
@@ -387,7 +386,7 @@ class Scene extends StatelessWidget {
               // group307YnH (147:4092)
               left: 309*fem,
               top: 550*fem,
-              child: Container(
+              child: SizedBox(
                 width: 30*fem,
                 height: 16*fem,
                 child: Row(
@@ -412,7 +411,7 @@ class Scene extends StatelessWidget {
                         fontSize: 12*ffem,
                         fontWeight: FontWeight.w500,
                         height: 1.2575*ffem/fem,
-                        color: Color(0xff8d94a2),
+                        color: const Color(0xff8d94a2),
                       ),
                     ),
                   ],
