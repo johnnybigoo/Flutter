@@ -14,9 +14,8 @@ import 'package:myapp/utils.dart';
 // import 'package:myapp/designs/transaction-details-income.dart';
 // import 'package:myapp/designs/transaction-details-expense.dart';
 // import 'package:myapp/designs/bill-details.dart';
-import 'package:myapp/designs/bill-payment.dart';
-
-// import 'package:myapp/designs/bill-payment-JM3.dart';
+// import 'package:myapp/designs/bill-payment.dart';
+import 'package:myapp/designs/bill-payment-JM3.dart';
 // import 'package:myapp/thumbnail/thumbnail.dart';
 
 void main() => runApp(const MyApp());
