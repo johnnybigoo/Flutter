@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 
-class TransactionForm extends StatelessWidget {
-  // TransactionForm({Key? key}) : super(key: key);
-
-  final titleController = TextEditingController();
-  final valueController = TextEditingController();
-
+class TransactionForm extends StatefulWidget {
   final void Function(String, double) onSubmit;
 
   TransactionForm(this.onSubmit);
+
+  @override
+  State<TransactionForm> createState() => _TransactionFormState();
+}
+
+class _TransactionFormState extends State<TransactionForm> {
+  // TransactionForm({Key? key}) : super(key: key);
+  final titleController = TextEditingController();
+
+  final valueController = TextEditingController();
+
+  _submitForm() {
+    final title = titleController.text;
+    final value = double.tryParse(valueController.text) ?? 0.0;
+
+    if (title.isEmpty || value <= 0) {
+      return;
+    }
+    widget.onSubmit(title, value);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +36,17 @@ class TransactionForm extends StatelessWidget {
             TextField(
               // onChanged: (newValue) => title = newValue,
               controller: titleController,
-              decoration: const InputDecoration(labelText: 'Titulo'),
+              onSubmitted: (_) => _submitForm(),
+              decoration: const InputDecoration(
+                labelText: 'Titulo',
+              ),
             ),
             TextField(
               // onChanged: (newValue) => value = newValue,
               controller: valueController,
+              keyboardType:
+                  const TextInputType.numberWithOptions(decimal: true),
+              onSubmitted: (_) => _submitForm(),
               decoration: const InputDecoration(
                 labelText: 'Valor (R\$)',
               ),
@@ -37,11 +58,7 @@ class TransactionForm extends StatelessWidget {
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.indigo,
                   ),
-                  onPressed: () {
-                    final title = titleController.text;
-                    final value = double.tryParse(valueController.text) ?? 0.0;
-                    onSubmit(title, value);
-                  },
+                  onPressed: _submitForm,
                   child: const Text('Nova Transacao'),
                 ),
               ],
