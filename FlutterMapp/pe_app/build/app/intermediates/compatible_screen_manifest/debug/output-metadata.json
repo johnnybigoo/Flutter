@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "com.fluttermap.course.practical_exercise_1",
+  "variantName": "debug",
+  "elements": []
+}

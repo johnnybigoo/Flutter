@@ -1,0 +1,4 @@
+#Thu Mar 09 10:27:39 EST 2023
+base.0=/Users/Jones_Mac/Projects/Flutter/FlutterMapp/pe_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
