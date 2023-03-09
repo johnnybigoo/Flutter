@@ -1,9 +1,6 @@
-import 'dart:math';
-
-import 'package:expesnes_app/components/transaction_form.dart';
 import 'package:flutter/material.dart';
-
-// import 'components/transaction_user.dart';
+import 'dart:math';
+import 'components/transaction_form.dart';
 import 'components/transaction_list.dart';
 import 'models/transaction.dart';
 
@@ -14,14 +11,33 @@ class ExpenseApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData tema = ThemeData();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      home: const MyHomePage(),
+      theme: tema.copyWith(
+        colorScheme: tema.colorScheme.copyWith(
+          primary: Colors.indigo,
+          secondary: Colors.amber,
+        ),
+        textTheme: tema.textTheme.copyWith(
+          // ignore: prefer_const_constructors
+          titleLarge: TextStyle(
+            fontFamily: 'Quicksand',
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.indigo,
+          ),
+        ),
         appBarTheme: const AppBarTheme(
-          color: Colors.indigo,
+          titleTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
-      home: const MyHomePage(),
     );
   }
 }
@@ -37,19 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
   late String title;
   late String value;
 
-  final _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'Novo Tenis de Corrida',
-      value: 310.76,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Conta de Luz',
-      value: 211.30,
-      date: DateTime.now(),
-    ),
+  final List<Transaction> _transactions = [
+    // Transaction(
+    //   id: 't1',
+    //   title: 'Novo Tenis de Corrida',
+    //   value: 310.76,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'Conta de Luz',
+    //   value: 211.30,
+    //   date: DateTime.now(),
+    // ),
   ];
 
   _addTransaction(String title, double value) {
@@ -81,26 +97,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Despesas Pessoais'),
         actions: [
           IconButton(
             onPressed: () => _openTransactionFormModal(context),
             icon: const Icon(Icons.add),
           ),
         ],
-        centerTitle: true,
+        // centerTitle: true,
         // backgroundColor: Colors.indigo,
-        title: const Text('Despesas Pessoais'),
       ),
       body: SingleChildScrollView(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              child: const Card(
+            const SizedBox(
+              width: double.infinity,
+              child: Card(
                 color: Colors.indigo,
                 elevation: 5,
-                child: Text('Grafico'),
+                child: Text(
+                  'Grafico',
+                  style: TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ),
             TransactionList(_transactions),
@@ -115,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.indigo,
+        // backgroundColor: Colors.indigo,
         onPressed: () => _openTransactionFormModal(context),
         child: const Icon(Icons.add),
       ),
