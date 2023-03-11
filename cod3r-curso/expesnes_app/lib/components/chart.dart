@@ -10,7 +10,7 @@ class Chart extends StatelessWidget {
 
   const Chart(this.recentTransaction, {super.key});
 
-  List<Map<String, Object>> get groupedTransactions {
+  Iterable<Map<String, Object>> get groupedTransactions {
     return List.generate(7, (index) {
       final weekDay = DateTime.now().subtract(
         Duration(days: index),
@@ -32,7 +32,7 @@ class Chart extends StatelessWidget {
         'day': DateFormat.E().format(weekDay)[0],
         'value': totalSum,
       };
-    });
+    }).reversed.toList();
   }
 
   double get _weekTotalValue {
@@ -56,7 +56,9 @@ class Chart extends StatelessWidget {
               child: ChatBar(
                 label: (tr['day'] as String),
                 value: (tr['value'] as double),
-                percentage: (tr['value'] as double) / _weekTotalValue,
+                percentage: _weekTotalValue == 0
+                    ? 0
+                    : (tr['value'] as double) / _weekTotalValue,
               ),
             );
           }).toList(),
