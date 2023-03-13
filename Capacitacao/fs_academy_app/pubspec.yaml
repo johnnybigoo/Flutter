@@ -42,6 +42,7 @@ dependencies:
   # gradient_text: ^1.0.2
   simple_gradient_text: ^1.2.4
   flutter_svg: ^2.0.3
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:

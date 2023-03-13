@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:fs_academy_app/app/app.bottomsheets.dart';
 import 'package:fs_academy_app/app/app.dialogs.dart';
@@ -25,14 +26,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveApp(
       builder: (_) => MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         title: 'Stacked Application',
         theme: Theme.of(context).copyWith(
-          primaryColor: kcBackgroundColor,
-          focusColor: kcPrimaryColor,
-          textTheme: Theme.of(context).textTheme.apply(
-                bodyColor: Colors.indigo,
-              ),
-        ),
+            primaryColor: kcBackgroundColor,
+            focusColor: kcPrimaryColor,
+            textTheme: GoogleFonts.openSansTextTheme().apply(
+              bodyColor: Colors.white,
+            )),
         routerDelegate: stackedRouter.delegate(),
         routeInformationParser: stackedRouter.defaultRouteParser(),
       ),
