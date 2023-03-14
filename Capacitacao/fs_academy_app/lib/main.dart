@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveApp(
+      preferDesktop: true,
       builder: (_) => MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Stacked Application',
