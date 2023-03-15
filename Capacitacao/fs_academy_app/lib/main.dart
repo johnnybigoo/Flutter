@@ -6,13 +6,10 @@ import 'package:fs_academy_app/app/app.dialogs.dart';
 import 'package:fs_academy_app/app/app.locator.dart';
 import 'package:fs_academy_app/app/app.router.dart';
 import 'package:fs_academy_app/ui/common/app_colors.dart';
-import 'package:url_strategy/url_strategy.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 void main() {
-  setPathUrlStrategy();
-  setupLocator(
-    stackedRouter: stackedRouter,
-  );
+  setupLocator();
   setupDialogUi();
   setupBottomSheetUi();
 
@@ -26,18 +23,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveApp(
       preferDesktop: true,
-      builder: (_) => MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        title: 'Stacked Application',
-        theme: Theme.of(context).copyWith(
+      builder: (context) {
+        return MaterialApp(
+          title: 'FilledStacks Academy',
+          theme: Theme.of(context).copyWith(
             primaryColor: kcBackgroundColor,
             focusColor: kcPrimaryColor,
-            textTheme: GoogleFonts.openSansTextTheme().apply(
+            textTheme: GoogleFonts.openSansTextTheme(
+              Theme.of(context).textTheme,
+            ).apply(
               bodyColor: Colors.white,
-            )),
-        routerDelegate: stackedRouter.delegate(),
-        routeInformationParser: stackedRouter.defaultRouteParser(),
-      ),
+            ),
+          ),
+          initialRoute: Routes.startupView,
+          onGenerateRoute: StackedRouter().onGenerateRoute,
+          navigatorKey: StackedService.navigatorKey,
+          navigatorObservers: [
+            StackedService.routeObserver,
+          ],
+        );
+      },
     );
   }
 }

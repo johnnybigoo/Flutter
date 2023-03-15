@@ -1,36 +1,21 @@
-import 'package:fs_academy_app/app/app.bottomsheets.dart';
-import 'package:fs_academy_app/app/app.dialogs.dart';
 import 'package:fs_academy_app/app/app.locator.dart';
-import 'package:fs_academy_app/ui/common/app_strings.dart';
+import 'package:fs_academy_app/app/app.logger.dart';
+import 'package:fs_academy_app/ui/views/home/home_view.form.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
-class HomeViewModel extends BaseViewModel {
-  final _dialogService = locator<DialogService>();
-  final _bottomSheetService = locator<BottomSheetService>();
+import '../../../services/http_services.dart';
 
-  String get counterLabel => 'Counter is: $_counter';
+class HomeViewModel extends FormViewModel {
+  final log = getLogger('HomeViewModel');
+  final httpService = locator<HttpService>();
 
-  int _counter = 0;
-
-  void incrementCounter() {
-    _counter++;
-    rebuildUi();
+  Future<void> notifyMe() async {
+    await runBusyFuture(httpService.addEmail(emailValue!));
+    clearForm();
   }
 
-  void showDialog() {
-    _dialogService.showCustomDialog(
-      variant: DialogType.infoAlert,
-      title: 'Stacked Rocks!',
-      description: 'Give stacked $_counter stars on Github',
-    );
-  }
+  bool get enableNotifyButton => hasEmail && isFormValid;
 
-  void showBottomSheet() {
-    _bottomSheetService.showCustomSheet(
-      variant: BottomSheetType.notice,
-      title: ksHomeBottomSheetTitle,
-      description: ksHomeBottomSheetDescription,
-    );
-  }
+  bool get showValidationError =>
+      hasEmail && emailValue!.length > 3 && hasEmailValidationMessage;
 }

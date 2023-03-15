@@ -1,16 +1,17 @@
 import 'package:stacked/stacked.dart';
 import 'package:fs_academy_app/app/app.locator.dart';
 import 'package:fs_academy_app/app/app.router.dart';
+
 import 'package:stacked_services/stacked_services.dart';
 
 class StartupViewModel extends BaseViewModel {
-  final _routerService = locator<RouterService>();
+  final _navigationService = locator<NavigationService>();
 
   // Place anything here that needs to happen before we get into the application
   Future runStartupLogic() async {
     // This is where you can make decisions on where your app should navigate when
     // you have custom startup logic
 
-    await _routerService.replaceWith(const HomeViewRoute());
+    await _navigationService.replaceWithHomeView();
   }
 }
