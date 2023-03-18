@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:widgets/widgets/about_dialog.dart';
+
+// import 'package:widgets/widgets/about_dialog.dart';
+import 'package:widgets/widgets/about_list_tile.dart';
 
 void main() {
   runApp(const MyApp());
