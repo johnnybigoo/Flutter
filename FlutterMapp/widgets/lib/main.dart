@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 // import 'package:widgets/widgets/about_dialog.dart';
-import 'package:widgets/widgets/about_list_tile.dart';
+// import 'package:widgets/widgets/about_list_tile.dart';
+import 'package:widgets/widgets/absorb_pointer.dart';
 
 void main() {
   runApp(const MyApp());
