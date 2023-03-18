@@ -1,0 +1,1 @@
+{"canvases":[{"x":451,"y":96,"w":393,"h":817,"locked":false,"widget":"const new_screen()"}],"dependencies":["lib/new_screen.dart"]}
