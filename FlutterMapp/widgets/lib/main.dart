@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/about_list_tile.dart';
 // import 'package:widgets/widgets/absorb_pointer.dart';
 // import 'package:widgets/widgets/alert_dialog.dart';
-import 'package:widgets/widgets/align.dart';
+// import 'package:widgets/widgets/align.dart';
+import 'package:widgets/widgets/animated_align.dart';
 
 void main() {
   runApp(const MyApp());
