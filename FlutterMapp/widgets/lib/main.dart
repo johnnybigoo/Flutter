@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/alert_dialog.dart';
 // import 'package:widgets/widgets/align.dart';
 // import 'package:widgets/widgets/animated_align.dart';
-import 'package:widgets/widgets/animated_builder.dart';
+// import 'package:widgets/widgets/animated_builder.dart';
+import 'package:widgets/widgets/animated_container.dart';
 
 void main() {
   runApp(const MyApp());
