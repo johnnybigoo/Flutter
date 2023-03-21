@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_builder.dart';
 // import 'package:widgets/widgets/animated_container.dart';
 // import 'package:widgets/widgets/animated_cross_fade.dart';
-import 'package:widgets/widgets/animated_default_textStyle.dart';
+// import 'package:widgets/widgets/animated_default_textStyle.dart';
+import 'package:widgets/widgets/animated_icon.dart';
 
 void main() {
   runApp(const MyApp());
