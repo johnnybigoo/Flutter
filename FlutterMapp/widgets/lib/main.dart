@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_container.dart';
 // import 'package:widgets/widgets/animated_cross_fade.dart';
 // import 'package:widgets/widgets/animated_default_textStyle.dart';
-import 'package:widgets/widgets/animated_icon.dart';
+// import 'package:widgets/widgets/animated_icon.dart';
+import 'package:widgets/widgets/animated_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +37,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const Center(
-          child: SingleChildScrollView(
-            child: Scene(),
-          ),
+          child: Scene(),
         ),
       ),
     );
