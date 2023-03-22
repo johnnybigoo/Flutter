@@ -11,7 +11,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_cross_fade.dart';
 // import 'package:widgets/widgets/animated_default_textStyle.dart';
 // import 'package:widgets/widgets/animated_icon.dart';
-import 'package:widgets/widgets/animated_list.dart';
+// import 'package:widgets/widgets/animated_list.dart';
+import 'package:widgets/widgets/animated_modal_barrier.dart';
 
 void main() {
   runApp(const MyApp());
