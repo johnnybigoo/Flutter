@@ -17,7 +17,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_padding.dart';
 // import 'package:widgets/widgets/animated_physical_modal.dart';
 // import 'package:widgets/widgets/animated_positioned.dart';
-import 'package:widgets/widgets/animated_rotation.dart';
+// import 'package:widgets/widgets/animated_rotation.dart';
+import 'package:widgets/widgets/animated_size.dart';
 
 void main() {
   runApp(const MyApp());
