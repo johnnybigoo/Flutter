@@ -13,7 +13,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_icon.dart';
 // import 'package:widgets/widgets/animated_list.dart';
 // import 'package:widgets/widgets/animated_modal_barrier.dart';
-import 'package:widgets/widgets/animated_opacity.dart';
+// import 'package:widgets/widgets/animated_opacity.dart';
+import 'package:widgets/widgets/animated_padding.dart';
 
 void main() {
   runApp(const MyApp());
