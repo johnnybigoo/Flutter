@@ -21,7 +21,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_size.dart';
 // import 'package:widgets/widgets/animated_switcher.dart';
 // import 'package:widgets/widgets/app_bar.dart';
-import 'package:widgets/widgets/aspect_ratio.dart';
+// import 'package:widgets/widgets/aspect_ratio.dart';
+import 'package:widgets/widgets/autocomplete.dart';
 
 void main() {
   runApp(const MyApp());
