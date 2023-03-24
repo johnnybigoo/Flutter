@@ -20,7 +20,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/animated_rotation.dart';
 // import 'package:widgets/widgets/animated_size.dart';
 // import 'package:widgets/widgets/animated_switcher.dart';
-import 'package:widgets/widgets/app_bar.dart';
+// import 'package:widgets/widgets/app_bar.dart';
+import 'package:widgets/widgets/aspect_ratio.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,12 +40,12 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Colors.grey[600],
-        // appBar: AppBar(
-        //   title: Title(
-        //     color: Colors.indigo,
-        //     child: const Text('Widgets'),
-        //   ),
-        // ),
+        appBar: AppBar(
+          title: Title(
+            color: Colors.indigo,
+            child: const Text('Widgets'),
+          ),
+        ),
         body: const Center(
           child: Scene(),
         ),
