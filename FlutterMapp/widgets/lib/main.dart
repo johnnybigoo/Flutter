@@ -1,28 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'package:widgets/widgets/about_dialog.dart';
-// import 'package:widgets/widgets/about_list_tile.dart';
-// import 'package:widgets/widgets/absorb_pointer.dart';
-// import 'package:widgets/widgets/alert_dialog.dart';
-// import 'package:widgets/widgets/align.dart';
-// import 'package:widgets/widgets/animated_align.dart';
-// import 'package:widgets/widgets/animated_builder.dart';
-// import 'package:widgets/widgets/animated_container.dart';
-// import 'package:widgets/widgets/animated_cross_fade.dart';
-// import 'package:widgets/widgets/animated_default_textStyle.dart';
-// import 'package:widgets/widgets/animated_icon.dart';
-// import 'package:widgets/widgets/animated_list.dart';
-// import 'package:widgets/widgets/animated_modal_barrier.dart';
-// import 'package:widgets/widgets/animated_opacity.dart';
-// import 'package:widgets/widgets/animated_padding.dart';
-// import 'package:widgets/widgets/animated_physical_modal.dart';
-// import 'package:widgets/widgets/animated_positioned.dart';
-// import 'package:widgets/widgets/animated_rotation.dart';
-// import 'package:widgets/widgets/animated_size.dart';
-// import 'package:widgets/widgets/animated_switcher.dart';
-// import 'package:widgets/widgets/app_bar.dart';
-// import 'package:widgets/widgets/aspect_ratio.dart';
-import 'package:widgets/widgets/autocomplete.dart';
+import 'package:widgets/imports.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +26,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const Center(
-          child: Scene(),
+          child: Imports(),
         ),
       ),
     );
