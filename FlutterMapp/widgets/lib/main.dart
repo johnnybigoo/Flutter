@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:widgets/imports.dart';
 
@@ -11,17 +12,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ));
     return MaterialApp(
+      //showSemanticsDebugger: true,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        primarySwatch: Colors.blueGrey,
       ),
       home: Scaffold(
-        backgroundColor: Colors.grey[600],
         appBar: AppBar(
+          centerTitle: true,
           title: Title(
-            color: Colors.indigo,
+            color: Colors.white,
             child: const Text('Widgets'),
           ),
         ),
