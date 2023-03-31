@@ -37,7 +37,8 @@ import 'package:flutter/material.dart';
 // Widgets starting in C
 // import 'package:widgets/widgets/C/card.dart';
 // import 'package:widgets/widgets/C/center.dart';
-import 'package:widgets/widgets/C/checkbox.dart';
+// import 'package:widgets/widgets/C/checkbox.dart';
+import 'package:widgets/widgets/C/checkbox_list_tile.dart';
 
 // Widgets starting in B
 class Imports extends StatelessWidget {
