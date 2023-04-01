@@ -47,7 +47,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/clip_path.dart';
 // import 'package:widgets/widgets/C/clip_rect.dart';
 // import 'package:widgets/widgets/C/clip_r_rect.dart';
-import 'package:widgets/widgets/C/close_button.dart';
+// import 'package:widgets/widgets/C/close_button.dart';
+import 'package:widgets/widgets/C/colored_box.dart';
 
 // Widgets starting in B
 class Imports extends StatelessWidget {
