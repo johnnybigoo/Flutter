@@ -41,7 +41,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/checkbox_list_tile.dart';
 // import 'package:widgets/widgets/C/chip.dart';
 // import 'package:widgets/widgets/C/choice_chip.dart';
-import 'package:widgets/widgets/C/circle_avatar.dart';
+// import 'package:widgets/widgets/C/circle_avatar.dart';
+import 'package:widgets/widgets/C/circular_progress_indicator.dart';
 
 // Widgets starting in B
 class Imports extends StatelessWidget {
