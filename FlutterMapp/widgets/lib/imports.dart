@@ -43,7 +43,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/choice_chip.dart';
 // import 'package:widgets/widgets/C/circle_avatar.dart';
 // import 'package:widgets/widgets/C/circular_progress_indicator.dart';
-import 'package:widgets/widgets/C/clip_oval_widget.dart';
+// import 'package:widgets/widgets/C/clip_oval_widget.dart';
+import 'package:widgets/widgets/C/clip_path.dart';
 
 // Widgets starting in B
 class Imports extends StatelessWidget {
