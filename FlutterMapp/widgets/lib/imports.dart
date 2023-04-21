@@ -68,7 +68,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/cupertino_search_textfield.dart';
 // import 'package:widgets/widgets/C/cupertino_segmented_control.dart';
 // import 'package:widgets/widgets/C/cupertino_slider.dart';
-import 'package:widgets/widgets/C/cupertino_sliding_segmentedcontrol.dart';
+// import 'package:widgets/widgets/C/cupertino_sliding_segmentedcontrol.dart';
+import 'package:widgets/widgets/C/cupertino_switch.dart';
 
 // Widgets starting in D
 class Imports extends StatelessWidget {
