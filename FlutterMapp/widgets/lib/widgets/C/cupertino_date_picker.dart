@@ -25,7 +25,7 @@ class _SceneState extends State<Scene> {
               builder: (BuildContext context) => SizedBox(
                 height: 250,
                 child: CupertinoDatePicker(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.blueGrey,
                   initialDateTime: dateTime,
                   onDateTimeChanged: (DateTime newTime) {
                     setState(() => dateTime = newTime);
