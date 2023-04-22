@@ -71,7 +71,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/cupertino_sliding_segmentedcontrol.dart';
 // import 'package:widgets/widgets/C/cupertino_switch.dart';
 // import 'package:widgets/widgets/C/cupertino_tab_scaffold.dart';
-import 'package:widgets/widgets/C/cupertino_tabbar.dart';
+// import 'package:widgets/widgets/C/cupertino_tabbar.dart';
+import 'package:widgets/widgets/C/cupertino_tabview.dart';
 
 // Widgets starting in D
 class Imports extends StatelessWidget {
