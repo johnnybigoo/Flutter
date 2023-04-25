@@ -78,7 +78,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/C/custom_scrollview.dart';
 
 // Widgets starting in D
-import 'package:widgets/widgets/D/data_table.dart';
+// import 'package:widgets/widgets/D/data_table.dart';
+import 'package:widgets/widgets/D/data_column.dart';
 
 // Widgets starting in E
 class Imports extends StatelessWidget {
