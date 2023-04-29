@@ -88,7 +88,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/D/dismissible.dart';
 // import 'package:widgets/widgets/D/divider.dart';
 // import 'package:widgets/widgets/D/draggable_scrollable.dart';
-import 'package:widgets/widgets/D/drag_target.dart';
+// import 'package:widgets/widgets/D/drag_target.dart';
+import 'package:widgets/widgets/D/draggable_widget.dart';
 
 // Widgets starting in E
 class Imports extends StatelessWidget {
