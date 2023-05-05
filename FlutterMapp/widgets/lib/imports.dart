@@ -105,9 +105,9 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/E/expansion_tile.dart';
 
 // Widgets starting in F
-import 'package:widgets/widgets/F/fadein_image.dart';
+// import 'package:widgets/widgets/F/fadein_image.dart';
+import 'package:widgets/widgets/F/fade_transition.dart';
 
-// Widgets starting in E
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
 
