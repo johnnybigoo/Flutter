@@ -1,4 +1,4 @@
-//!ExpansionPanelList
+//!ExpansionPanel
 
 import 'package:flutter/material.dart';
 
