@@ -107,7 +107,8 @@ import 'package:flutter/material.dart';
 // Widgets starting in F
 // import 'package:widgets/widgets/F/fadein_image.dart';
 // import 'package:widgets/widgets/F/fade_transition.dart';
-import 'package:widgets/widgets/F/filter_chip.dart';
+// import 'package:widgets/widgets/F/filter_chip.dart';
+import 'package:widgets/widgets/F/fitted_box.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
