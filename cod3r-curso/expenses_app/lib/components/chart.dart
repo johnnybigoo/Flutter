@@ -1,16 +1,14 @@
-import 'package:expesnes_app/components/chart_bar.dart';
-import 'package:expesnes_app/models/transaction.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import '../models/transaction.dart';
+import 'chart_bar.dart';
 
 class Chart extends StatelessWidget {
-  //Chart(this.recentTransaction);
-
   final List<Transaction> recentTransaction;
 
-  const Chart(this.recentTransaction, {super.key});
+  const Chart(this.recentTransaction, {Key? key}) : super(key: key);
 
-  Iterable<Map<String, Object>> get groupedTransactions {
+  List<Map<String, Object>> get groupedTransactions {
     return List.generate(7, (index) {
       final weekDay = DateTime.now().subtract(
         Duration(days: index),
@@ -45,17 +43,17 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 6,
-      margin: const EdgeInsets.all(20.0),
+      margin: const EdgeInsets.all(20),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupedTransactions.map((tr) {
             return Flexible(
               fit: FlexFit.tight,
-              child: ChatBar(
-                label: (tr['day'] as String),
-                value: (tr['value'] as double),
+              child: ChartBar(
+                label: tr['day'] as String,
+                value: tr['value'] as double,
                 percentage: _weekTotalValue == 0
                     ? 0
                     : (tr['value'] as double) / _weekTotalValue,
