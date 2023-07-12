@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "crud-flutter-nestjs/frontend"
+        },
+        {
+            "path": "crud-flutter-nestjs/backend"
+        }
+    ]
+}
