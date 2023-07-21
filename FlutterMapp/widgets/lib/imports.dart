@@ -121,7 +121,8 @@ import 'package:flutter/material.dart';
 // Widgets starting in G
 // import 'package:widgets/widgets/G/gesture_detector.dart';
 // import 'package:widgets/widgets/G/grid_paper.dart';
-import 'package:widgets/widgets/G/grid_tile.dart';
+// import 'package:widgets/widgets/G/grid_tile.dart';
+import 'package:widgets/widgets/G/grid_tile_bar.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
