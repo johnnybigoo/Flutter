@@ -34,9 +34,7 @@ class MyApp extends StatelessWidget {
             child: const Text('Widgets'),
           ),
         ),
-        body: const Center(
-          child: Imports(),
-        ),
+        body: const Imports(),
       ),
     );
   }
