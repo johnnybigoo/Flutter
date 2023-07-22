@@ -2,7 +2,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Scene extends StatelessWidget {
   const Scene({super.key});

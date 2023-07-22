@@ -126,7 +126,10 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/G/grid_view.dart';
 
 // Widgets starting in H
-import 'package:widgets/widgets/H/hero.dart';
+// import 'package:widgets/widgets/H/hero.dart';
+
+// Widgets starting in I
+import 'package:widgets/widgets/I/icon.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
