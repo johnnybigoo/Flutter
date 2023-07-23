@@ -1,4 +1,4 @@
-//!IconButton
+//!IgnorePointer
 
 import 'package:flutter/material.dart';
 
@@ -10,25 +10,32 @@ class Scene extends StatefulWidget {
 }
 
 class _SceneState extends State<Scene> {
-  int click = 0;
+  bool ignore = false;
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          IconButton(
+          ElevatedButton(
             onPressed: () {
               setState(() {
-                click += 1;
+                ignore = !ignore;
               });
             },
-            icon: const Icon(Icons.add_box),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: ignore ? Colors.red : Colors.green,
+            ),
+            child: Text(
+              ignore ? 'Blocked' : 'All good',
+            ),
           ),
-          Text(
-            'Click $click',
-            style: const TextStyle(
-              fontSize: 40,
+          IgnorePointer(
+            ignoring: ignore,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const Text('Click me!'),
             ),
           ),
         ],
