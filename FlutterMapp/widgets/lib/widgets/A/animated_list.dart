@@ -58,7 +58,7 @@ class _SceneState extends State<Scene> {
           child: AnimatedList(
             key: _key,
             initialItemCount: 0,
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             itemBuilder: (context, index, animation) {
               return SizeTransition(
                 sizeFactor: animation,

@@ -1,4 +1,5 @@
 {
-  "dart.flutterSdkPath": "/Users/Jones_Mac/fvm/versions/3.7.1",
-  "java.configuration.updateBuildConfiguration": "interactive"
+  "dart.flutterSdkPath": "C:\\Users\\Jones\\.puro\\envs\\fmapp\\flutter",
+  "java.configuration.updateBuildConfiguration": "interactive",
+    "dart.sdkPath": "C:\\Users\\Jones\\.puro\\envs\\fmapp\\flutter\\bin\\cache\\dart-sdk"
 }
