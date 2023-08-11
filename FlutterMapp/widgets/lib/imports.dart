@@ -172,7 +172,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/P/padding.dart';
 // import 'package:widgets/widgets/P/page_view.dart';
 // import 'package:widgets/widgets/P/physical_modal.dart';
-import 'package:widgets/widgets/P/physical_shape.dart';
+// import 'package:widgets/widgets/P/physical_shape.dart';
+import 'package:widgets/widgets/P/placeholder.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
