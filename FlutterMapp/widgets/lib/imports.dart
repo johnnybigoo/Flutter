@@ -182,7 +182,8 @@ import 'package:flutter/material.dart';
 
 // Widgets starting in R
 // import 'package:widgets/widgets/R/radio.dart';
-import 'package:widgets/widgets/R/radio_list_tile.dart';
+// import 'package:widgets/widgets/R/radio_list_tile.dart';
+import 'package:widgets/widgets/R/range_slider.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
