@@ -195,7 +195,8 @@ import 'package:flutter/material.dart';
 
 // Widgets starting in S
 // import 'package:widgets/widgets/S/safe_area.dart';
-import 'package:widgets/widgets/S/scaffold.dart';
+// import 'package:widgets/widgets/S/scaffold.dart';
+import 'package:widgets/widgets/S/scale_transition.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
