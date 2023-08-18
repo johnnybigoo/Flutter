@@ -194,7 +194,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/R/row.dart';
 
 // Widgets starting in S
-import 'package:widgets/widgets/S/safe_area.dart';
+// import 'package:widgets/widgets/S/safe_area.dart';
+import 'package:widgets/widgets/S/scaffold.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
