@@ -206,7 +206,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/S/single_child_scrollview.dart';
 // import 'package:widgets/widgets/S/size_transition.dart';
 // import 'package:widgets/widgets/S/sized_box.dart';
-import 'package:widgets/widgets/S/sized_overflow_box.dart';
+// import 'package:widgets/widgets/S/sized_overflow_box.dart';
+import 'package:widgets/widgets/S/slide_transition.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
