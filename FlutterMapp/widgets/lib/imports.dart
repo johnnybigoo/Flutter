@@ -215,7 +215,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/S/sliver_list.dart';
 // import 'package:widgets/widgets/S/sliver_opacity.dart';
 // import 'package:widgets/widgets/S/sliver_padding.dart';
-import 'package:widgets/widgets/S/sliver_to_box_adapter.dart';
+// import 'package:widgets/widgets/S/sliver_to_box_adapter.dart';
+import 'package:widgets/widgets/S/snack_bar.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
