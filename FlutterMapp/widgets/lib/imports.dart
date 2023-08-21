@@ -202,7 +202,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/S/semantics.dart';
 // import 'package:widgets/widgets/S/shader_mask.dart';
 // import 'package:widgets/widgets/S/shortcuts.dart';
-import 'package:widgets/widgets/S/simple_dialog.dart';
+// import 'package:widgets/widgets/S/simple_dialog.dart';
+import 'package:widgets/widgets/S/single_child_scrollview.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
