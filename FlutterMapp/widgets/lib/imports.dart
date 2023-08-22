@@ -221,7 +221,8 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/S/stack.dart';
 // import 'package:widgets/widgets/S/stepper.dart';
 // import 'package:widgets/widgets/S/stream_builder.dart';
-import 'package:widgets/widgets/S/switch.dart';
+// import 'package:widgets/widgets/S/switch.dart';
+import 'package:widgets/widgets/S/switch_list_tile.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
