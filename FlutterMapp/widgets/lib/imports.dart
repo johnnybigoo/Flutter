@@ -223,7 +223,10 @@ import 'package:flutter/material.dart';
 // import 'package:widgets/widgets/S/stream_builder.dart';
 // import 'package:widgets/widgets/S/switch.dart';
 // import 'package:widgets/widgets/S/switch_list_tile.dart';
-import 'package:widgets/widgets/S/system_mouse_cursors.dart';
+// import 'package:widgets/widgets/S/system_mouse_cursors.dart';
+
+// Widgets starting in S
+import 'package:widgets/widgets/T/tab_page_selector.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
