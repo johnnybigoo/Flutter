@@ -228,7 +228,8 @@ import 'package:flutter/material.dart';
 // Widgets starting in S
 // import 'package:widgets/widgets/T/tab_page_selector.dart';
 // import 'package:widgets/widgets/T/table.dart';
-import 'package:widgets/widgets/T/tab_bar.dart';
+// import 'package:widgets/widgets/T/tab_bar.dart';
+import 'package:widgets/widgets/T/text.dart';
 
 class Imports extends StatelessWidget {
   const Imports({Key? key}) : super(key: key);
