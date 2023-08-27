@@ -39,7 +39,8 @@ class Scene extends StatelessWidget {
           height: 500,
           color: Colors.orangeAccent,
           child: const Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            // mainAxisAlignment: MainAxisAlignment.start,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(Icons.star, size: 60),
