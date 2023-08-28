@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             'Layouts Cheat-Sheet',
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.blue[300],
+          backgroundColor: Colors.indigo[900],
         ),
         body: const Imports(),
       ),

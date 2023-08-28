@@ -9,7 +9,7 @@ class Scene extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[200],
+        backgroundColor: Colors.indigo[300],
         title: const Text(
           'Expanded',
           style: TextStyle(
@@ -28,7 +28,7 @@ class Scene extends StatelessWidget {
                 children: [
                   Expanded(
                       child: Container(
-                    color: Colors.red,
+                    color: Colors.blue[800],
                   ))
                 ],
               ),
@@ -40,7 +40,7 @@ class Scene extends StatelessWidget {
                 children: [
                   Expanded(
                       child: Container(
-                    color: Colors.amber,
+                    color: Colors.blue[500],
                   ))
                 ],
               ),
@@ -51,7 +51,7 @@ class Scene extends StatelessWidget {
                 children: [
                   Expanded(
                       child: Container(
-                    color: Colors.blue,
+                    color: Colors.blue[300],
                   ))
                 ],
               ),
