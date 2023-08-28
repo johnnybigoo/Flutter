@@ -19,15 +19,18 @@ class Scene extends StatelessWidget {
         ),
       ),
       body: ConstrainedBox(
-        constraints: const BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(height: 300),
         child: Card(
             // padding: const EdgeInsets.all(8.0),
             color: Colors.blue[200],
             child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Hello World'),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text('Hello World'),
+                ),
               ],
             )),
       ),
