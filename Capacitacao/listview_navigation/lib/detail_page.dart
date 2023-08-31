@@ -1,18 +1,45 @@
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
-  final int itemIndex;
+  const DetailPage({super.key});
 
-  DetailPage({required this.itemIndex});
+  // final int itemIndex;
+
+  // DetailPage({required this.itemIndex});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Page'),
+        title: const Text('FlutterMapp Widgets'),
       ),
-      body: Center(
-        child: Text('Details for Item $itemIndex'),
+      body: ListView(
+        children: [
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'AboutDialog',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget1');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'AboutListTile',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget2');
+            },
+          ),
+        ],
       ),
     );
   }

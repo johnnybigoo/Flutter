@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:listview_navigation/list_view.dart';
+import 'package:listview_navigation/detail_page.dart';
+import 'package:listview_navigation/widgets/about_dialog.dart';
+import 'package:listview_navigation/widgets/about_list_tile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,17 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: ListViewNavigationExample(),
+      title: 'Widget Screen App',
+      initialRoute: '/menu',
+      routes: {
+        '/menu': (context) => const DetailPage(),
+        // Define named routes for your 215 widget screens
+        '/widget1': (context) => const Widget01(),
+        '/widget2': (context) => const Widget02(),
+        // ...
+      },
     );
   }
 }
