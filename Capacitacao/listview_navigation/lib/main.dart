@@ -12,6 +12,7 @@ import 'package:listview_navigation/widgets/animated_cross_fade.dart';
 import 'package:listview_navigation/widgets/animated_default_textStyle.dart';
 import 'package:listview_navigation/widgets/animated_icon.dart';
 import 'package:listview_navigation/widgets/animated_list.dart';
+import 'package:listview_navigation/widgets/animated_modal_barrier.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/widget10': (context) => const Widget10(),
         '/widget11': (context) => const Widget11(),
         '/widget12': (context) => const Widget12(),
+        '/widget13': (context) => const Widget13(),
         // ...
       },
     );
