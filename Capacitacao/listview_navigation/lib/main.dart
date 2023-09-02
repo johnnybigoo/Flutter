@@ -20,6 +20,7 @@ import 'package:listview_navigation/widgets/A/animated_positioned.dart';
 import 'package:listview_navigation/widgets/A/animated_rotation.dart';
 import 'package:listview_navigation/widgets/A/animated_size.dart';
 import 'package:listview_navigation/widgets/A/animated_switcher.dart';
+import 'package:listview_navigation/widgets/A/app_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         '/widget18': (context) => const Widget18(),
         '/widget19': (context) => const Widget19(),
         '/widget20': (context) => const Widget20(),
+        '/widget21': (context) => const Widget21(),
         // ...
       },
     );
