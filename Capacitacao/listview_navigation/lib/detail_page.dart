@@ -198,7 +198,7 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'AnimatedPhysicalModal',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
