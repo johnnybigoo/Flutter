@@ -15,6 +15,20 @@ class DetailPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          const ListTile(
+            // trailing: const Icon(Icons.arrow_forward_ios),
+            title: Text(
+              '========= A =========',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            // onTap: () {
+            //   Navigator.pushNamed(context, '/widget24');
+            // },
+          ),
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
@@ -282,7 +296,7 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'AutoComplete',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -291,10 +305,24 @@ class DetailPage extends StatelessWidget {
               Navigator.pushNamed(context, '/widget23');
             },
           ),
+          const ListTile(
+            // trailing: const Icon(Icons.arrow_forward_ios),
+            title: Text(
+              '========= B =========',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            // onTap: () {
+            //   Navigator.pushNamed(context, '/widget24');
+            // },
+          ),
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'B',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -306,7 +334,7 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'B',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -318,7 +346,7 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'B',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -330,25 +358,13 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'AboutListTile',
+              'B',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
             onTap: () {
               Navigator.pushNamed(context, '/widget27');
-            },
-          ),
-          ListTile(
-            trailing: const Icon(Icons.arrow_forward_ios),
-            title: const Text(
-              'AboutListTile',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {
-              Navigator.pushNamed(context, '/widget28');
             },
           ),
         ],
