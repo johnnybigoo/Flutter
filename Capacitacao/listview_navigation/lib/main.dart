@@ -14,6 +14,7 @@ import 'package:listview_navigation/widgets/animated_icon.dart';
 import 'package:listview_navigation/widgets/animated_list.dart';
 import 'package:listview_navigation/widgets/animated_modal_barrier.dart';
 import 'package:listview_navigation/widgets/animated_opacity.dart';
+import 'package:listview_navigation/widgets/animated_padding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         '/widget12': (context) => const Widget12(),
         '/widget13': (context) => const Widget13(),
         '/widget14': (context) => const Widget14(),
+        '/widget15': (context) => const Widget15(),
         // ...
       },
     );
