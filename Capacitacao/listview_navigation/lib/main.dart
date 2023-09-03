@@ -23,6 +23,7 @@ import 'package:listview_navigation/widgets/A/animated_switcher.dart';
 import 'package:listview_navigation/widgets/A/app_bar.dart';
 import 'package:listview_navigation/widgets/A/aspect_ratio.dart';
 import 'package:listview_navigation/widgets/A/autocomplete.dart';
+import 'package:listview_navigation/widgets/B/backdrop_filter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
         '/widget21': (context) => const Widget21(),
         '/widget22': (context) => const Widget22(),
         '/widget23': (context) => const Widget23(),
+        '/widget24': (context) => const Widget24(),
         // ...
       },
     );
