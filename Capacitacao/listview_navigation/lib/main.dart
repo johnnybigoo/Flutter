@@ -30,6 +30,7 @@ import 'package:listview_navigation/widgets/B/block_semantics.dart';
 import 'package:listview_navigation/widgets/B/bottom_navigation_bar.dart';
 import 'package:listview_navigation/widgets/B/bottom_sheet.dart';
 import 'package:listview_navigation/widgets/B/builder.dart';
+import 'package:listview_navigation/widgets/C/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,6 +78,7 @@ class MyApp extends StatelessWidget {
         '/widget28': (context) => const Widget28(),
         '/widget29': (context) => const Widget29(),
         '/widget30': (context) => const Widget30(),
+        '/widget31': (context) => const Widget31(),
         // ...
       },
     );
