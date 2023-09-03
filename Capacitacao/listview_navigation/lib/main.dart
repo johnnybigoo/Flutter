@@ -35,6 +35,7 @@ import 'package:listview_navigation/widgets/C/center.dart';
 import 'package:listview_navigation/widgets/C/checkbox.dart';
 import 'package:listview_navigation/widgets/C/checkbox_list_tile.dart';
 import 'package:listview_navigation/widgets/C/chip.dart';
+import 'package:listview_navigation/widgets/C/choice_chip.dart';
 
 void main() {
   runApp(const MyApp());
@@ -87,6 +88,7 @@ class MyApp extends StatelessWidget {
         '/widget33': (context) => const Widget33(),
         '/widget34': (context) => const Widget34(),
         '/widget35': (context) => const Widget35(),
+        '/widget36': (context) => const Widget36(),
         // ...
       },
     );

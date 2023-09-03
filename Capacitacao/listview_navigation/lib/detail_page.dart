@@ -480,7 +480,7 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'C',
+              'ChoiceChip',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
