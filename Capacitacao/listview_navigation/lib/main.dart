@@ -32,6 +32,7 @@ import 'package:listview_navigation/widgets/B/bottom_sheet.dart';
 import 'package:listview_navigation/widgets/B/builder.dart';
 import 'package:listview_navigation/widgets/C/card.dart';
 import 'package:listview_navigation/widgets/C/center.dart';
+import 'package:listview_navigation/widgets/C/checkbox.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,6 +82,7 @@ class MyApp extends StatelessWidget {
         '/widget30': (context) => const Widget30(),
         '/widget31': (context) => const Widget31(),
         '/widget32': (context) => const Widget32(),
+        '/widget33': (context) => const Widget33(),
         // ...
       },
     );
