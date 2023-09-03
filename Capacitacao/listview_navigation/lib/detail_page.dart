@@ -358,13 +358,75 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
-              'B',
+              'BlockSemantics',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
             onTap: () {
               Navigator.pushNamed(context, '/widget27');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'B',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget28');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'B',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget29');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'B',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget30');
+            },
+          ),
+          const ListTile(
+            // trailing: const Icon(Icons.arrow_forward_ios),
+            title: Text(
+              '========= C =========',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            // onTap: () {
+            //   Navigator.pushNamed(context, '/widget24');
+            // },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'C',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget31');
             },
           ),
         ],
