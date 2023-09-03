@@ -27,6 +27,7 @@ import 'package:listview_navigation/widgets/B/backdrop_filter.dart';
 import 'package:listview_navigation/widgets/B/banner.dart';
 import 'package:listview_navigation/widgets/B/baseline.dart';
 import 'package:listview_navigation/widgets/B/block_semantics.dart';
+import 'package:listview_navigation/widgets/B/bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,6 +72,7 @@ class MyApp extends StatelessWidget {
         '/widget25': (context) => const Widget25(),
         '/widget26': (context) => const Widget26(),
         '/widget27': (context) => const Widget27(),
+        '/widget28': (context) => const Widget28(),
         // ...
       },
     );
