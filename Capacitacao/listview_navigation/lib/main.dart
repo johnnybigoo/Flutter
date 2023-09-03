@@ -25,6 +25,7 @@ import 'package:listview_navigation/widgets/A/aspect_ratio.dart';
 import 'package:listview_navigation/widgets/A/autocomplete.dart';
 import 'package:listview_navigation/widgets/B/backdrop_filter.dart';
 import 'package:listview_navigation/widgets/B/banner.dart';
+import 'package:listview_navigation/widgets/B/baseline.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
         '/widget23': (context) => const Widget23(),
         '/widget24': (context) => const Widget24(),
         '/widget25': (context) => const Widget25(),
+        '/widget26': (context) => const Widget26(),
         // ...
       },
     );
