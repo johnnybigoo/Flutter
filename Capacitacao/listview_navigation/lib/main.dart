@@ -42,6 +42,7 @@ import 'package:listview_navigation/widgets/C/clip_oval_widget.dart';
 import 'package:listview_navigation/widgets/C/clip_path.dart';
 import 'package:listview_navigation/widgets/C/clip_rect.dart';
 import 'package:listview_navigation/widgets/C/clip_rrect.dart';
+import 'package:listview_navigation/widgets/C/close_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -101,6 +102,7 @@ class MyApp extends StatelessWidget {
         '/widget40': (context) => const Widget40(),
         '/widget41': (context) => const Widget41(),
         '/widget42': (context) => const Widget42(),
+        '/widget43': (context) => const Widget43(),
         // ...
       },
     );
