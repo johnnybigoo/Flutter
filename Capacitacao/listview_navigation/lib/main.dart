@@ -40,6 +40,7 @@ import 'package:listview_navigation/widgets/C/circle_avatar.dart';
 import 'package:listview_navigation/widgets/C/circular_progress_indicator.dart';
 import 'package:listview_navigation/widgets/C/clip_oval_widget.dart';
 import 'package:listview_navigation/widgets/C/clip_path.dart';
+import 'package:listview_navigation/widgets/C/clip_rrect.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,6 +98,7 @@ class MyApp extends StatelessWidget {
         '/widget38': (context) => const Widget38(),
         '/widget39': (context) => const Widget39(),
         '/widget40': (context) => const Widget40(),
+        '/widget41': (context) => const Widget41(),
         // ...
       },
     );
