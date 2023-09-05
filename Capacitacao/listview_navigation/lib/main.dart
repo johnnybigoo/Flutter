@@ -46,6 +46,7 @@ import 'package:listview_navigation/widgets/C/close_button.dart';
 import 'package:listview_navigation/widgets/C/color_filtered.dart';
 import 'package:listview_navigation/widgets/C/colored_box.dart';
 import 'package:listview_navigation/widgets/C/column.dart';
+import 'package:listview_navigation/widgets/C/constrained_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -109,6 +110,7 @@ class MyApp extends StatelessWidget {
         '/widget44': (context) => const Widget44(),
         '/widget45': (context) => const Widget45(),
         '/widget46': (context) => const Widget46(),
+        '/widget47': (context) => const Widget47(),
         // ...
       },
     );
