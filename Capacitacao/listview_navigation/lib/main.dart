@@ -44,6 +44,7 @@ import 'package:listview_navigation/widgets/C/clip_rect.dart';
 import 'package:listview_navigation/widgets/C/clip_rrect.dart';
 import 'package:listview_navigation/widgets/C/close_button.dart';
 import 'package:listview_navigation/widgets/C/color_filtered.dart';
+import 'package:listview_navigation/widgets/C/colored_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -105,6 +106,7 @@ class MyApp extends StatelessWidget {
         '/widget42': (context) => const Widget42(),
         '/widget43': (context) => const Widget43(),
         '/widget44': (context) => const Widget44(),
+        '/widget45': (context) => const Widget45(),
         // ...
       },
     );
