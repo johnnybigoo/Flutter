@@ -53,6 +53,7 @@ import 'package:listview_navigation/widgets/C/cupertino_activity_indicator.dart'
 import 'package:listview_navigation/widgets/C/cupertino_alert_dialog.dart';
 import 'package:listview_navigation/widgets/C/cupertino_app.dart';
 import 'package:listview_navigation/widgets/C/cupertino_button.dart';
+import 'package:listview_navigation/widgets/C/cupertino_context_menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -123,6 +124,7 @@ class MyApp extends StatelessWidget {
         '/widget51': (context) => const Widget51(),
         '/widget52': (context) => const Widget52(),
         '/widget53': (context) => const Widget53(),
+        '/widget54': (context) => const Widget54(),
         // ...
       },
     );
