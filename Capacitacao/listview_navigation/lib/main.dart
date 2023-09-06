@@ -57,6 +57,7 @@ import 'package:listview_navigation/widgets/C/cupertino_context_menu.dart';
 import 'package:listview_navigation/widgets/C/cupertino_date_picker.dart';
 import 'package:listview_navigation/widgets/C/cupertino_page_route.dart';
 import 'package:listview_navigation/widgets/C/cupertino_page_scaffold.dart';
+import 'package:listview_navigation/widgets/C/cupertino_picker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -131,6 +132,7 @@ class MyApp extends StatelessWidget {
         '/widget55': (context) => const Widget55(),
         '/widget56': (context) => const Widget56(),
         '/widget57': (context) => const Widget57(),
+        '/widget58': (context) => const Widget58(),
         // ...
       },
     );
