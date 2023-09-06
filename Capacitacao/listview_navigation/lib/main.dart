@@ -62,6 +62,7 @@ import 'package:listview_navigation/widgets/C/cupertino_popup_surface.dart';
 import 'package:listview_navigation/widgets/C/cupertino_scrollbar.dart';
 import 'package:listview_navigation/widgets/C/cupertino_search_textfield.dart';
 import 'package:listview_navigation/widgets/C/cupertino_segmented_control.dart';
+import 'package:listview_navigation/widgets/C/cupertino_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -141,6 +142,7 @@ class MyApp extends StatelessWidget {
         '/widget60': (context) => const Widget60(),
         '/widget61': (context) => Widget61(),
         '/widget62': (context) => const Widget62(),
+        '/widget63': (context) => const Widget63(),
         // ...
       },
     );
