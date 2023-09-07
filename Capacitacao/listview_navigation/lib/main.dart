@@ -70,6 +70,7 @@ import 'package:listview_navigation/widgets/C/cupertino_tabbar.dart';
 import 'package:listview_navigation/widgets/C/cupertino_tabview.dart';
 import 'package:listview_navigation/widgets/C/cupertino_textfield.dart';
 import 'package:listview_navigation/widgets/C/custom_paint.dart';
+import 'package:listview_navigation/widgets/C/custom_scrollview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -157,6 +158,7 @@ class MyApp extends StatelessWidget {
         '/widget68': (context) => const Widget68(),
         '/widget69': (context) => Widget69(),
         '/widget70': (context) => const Widget70(),
+        '/widget71': (context) => const Widget71(),
         // ...
       },
     );
