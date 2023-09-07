@@ -71,6 +71,7 @@ import 'package:listview_navigation/widgets/C/cupertino_tabview.dart';
 import 'package:listview_navigation/widgets/C/cupertino_textfield.dart';
 import 'package:listview_navigation/widgets/C/custom_paint.dart';
 import 'package:listview_navigation/widgets/C/custom_scrollview.dart';
+import 'package:listview_navigation/widgets/D/data_cell.dart';
 
 void main() {
   runApp(const MyApp());
@@ -159,6 +160,7 @@ class MyApp extends StatelessWidget {
         '/widget69': (context) => Widget69(),
         '/widget70': (context) => const Widget70(),
         '/widget71': (context) => const Widget71(),
+        '/widget72': (context) => const Widget72(),
         // ...
       },
     );

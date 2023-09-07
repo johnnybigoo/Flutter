@@ -926,13 +926,193 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
+              'DataCell',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget72');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
               'D',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/widget');
+              Navigator.pushNamed(context, '/widget73');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget74');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget75');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget76');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget77');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget78');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget79');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget81');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget82');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget83');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget84');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget85');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget86');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget87');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
+              'D',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget88');
             },
           ),
           const ListTile(
