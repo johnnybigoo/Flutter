@@ -67,6 +67,7 @@ import 'package:listview_navigation/widgets/C/cupertino_sliding_segmentedcontrol
 import 'package:listview_navigation/widgets/C/cupertino_switch.dart';
 import 'package:listview_navigation/widgets/C/cupertino_tab_scaffold.dart';
 import 'package:listview_navigation/widgets/C/cupertino_tabbar.dart';
+import 'package:listview_navigation/widgets/C/cupertino_tabview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -151,6 +152,7 @@ class MyApp extends StatelessWidget {
         '/widget65': (context) => const Widget65(),
         '/widget66': (context) => const Widget66(),
         '/widget67': (context) => const Widget67(),
+        '/widget68': (context) => const Widget68(),
         // ...
       },
     );
