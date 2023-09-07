@@ -76,6 +76,7 @@ import 'package:listview_navigation/widgets/D/data_column.dart';
 import 'package:listview_navigation/widgets/D/data_picker.dart';
 import 'package:listview_navigation/widgets/D/data_table.dart';
 import 'package:listview_navigation/widgets/D/date_range_picker.dart';
+import 'package:listview_navigation/widgets/D/decoratedBox_transition.dart';
 
 void main() {
   runApp(const MyApp());
@@ -169,6 +170,7 @@ class MyApp extends StatelessWidget {
         '/widget74': (context) => const Widget74(),
         '/widget75': (context) => const Widget75(),
         '/widget76': (context) => const Widget76(),
+        '/widget77': (context) => const Widget77(),
         // ...
       },
     );
