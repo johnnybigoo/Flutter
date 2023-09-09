@@ -81,6 +81,7 @@ import 'package:listview_navigation/widgets/D/decorated_box.dart';
 import 'package:listview_navigation/widgets/D/default_textStyle.dart';
 import 'package:listview_navigation/widgets/D/dismissible.dart';
 import 'package:listview_navigation/widgets/D/divider.dart';
+import 'package:listview_navigation/widgets/D/drag_target.dart';
 
 void main() {
   runApp(const MyApp());
@@ -179,6 +180,7 @@ class MyApp extends StatelessWidget {
         '/widget79': (context) => const Widget79(),
         '/widget80': (context) => const Widget80(),
         '/widget81': (context) => const Widget81(),
+        '/widget82': (context) => const Widget82(),
         // ...
       },
     );
