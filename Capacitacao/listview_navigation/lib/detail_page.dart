@@ -1022,6 +1022,18 @@ class DetailPage extends StatelessWidget {
           ListTile(
             trailing: const Icon(Icons.arrow_forward_ios),
             title: const Text(
+              'Dismissible',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, '/widget80');
+            },
+          ),
+          ListTile(
+            trailing: const Icon(Icons.arrow_forward_ios),
+            title: const Text(
               'D',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -1101,18 +1113,6 @@ class DetailPage extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pushNamed(context, '/widget87');
-            },
-          ),
-          ListTile(
-            trailing: const Icon(Icons.arrow_forward_ios),
-            title: const Text(
-              'D',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {
-              Navigator.pushNamed(context, '/widget88');
             },
           ),
           const ListTile(
