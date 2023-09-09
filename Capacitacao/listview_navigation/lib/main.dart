@@ -83,6 +83,7 @@ import 'package:listview_navigation/widgets/D/dismissible.dart';
 import 'package:listview_navigation/widgets/D/divider.dart';
 import 'package:listview_navigation/widgets/D/drag_target.dart';
 import 'package:listview_navigation/widgets/D/draggable_scrollable.dart';
+import 'package:listview_navigation/widgets/D/draggable_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -183,6 +184,7 @@ class MyApp extends StatelessWidget {
         '/widget81': (context) => const Widget81(),
         '/widget82': (context) => const Widget82(),
         '/widget83': (context) => const Widget83(),
+        '/widget84': (context) => const Widget84(),
         // ...
       },
     );
