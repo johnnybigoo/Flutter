@@ -87,6 +87,7 @@ import 'package:listview_navigation/widgets/D/draggable_widget.dart';
 import 'package:listview_navigation/widgets/D/drawer.dart';
 import 'package:listview_navigation/widgets/D/drawer_header.dart';
 import 'package:listview_navigation/widgets/D/dropdown_button.dart';
+import 'package:listview_navigation/widgets/E/elevated_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -191,6 +192,7 @@ class MyApp extends StatelessWidget {
         '/widget85': (context) => const Widget85(),
         '/widget86': (context) => const Widget86(),
         '/widget87': (context) => const Widget87(),
+        '/widget88': (context) => const Widget88(),
         // ...
       },
     );
